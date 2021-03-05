@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    const float oyCameraPosition = 4, ozCameraPosition = 7;//distances camera -> car
+    const float oyCameraPosition = 4, ozCameraPosition = 7;//distance camera -> car
     const float xQuat = 0.1f, wQuat = 0.9f;
     private Camera camera;
     private CarMovement carMovement;
