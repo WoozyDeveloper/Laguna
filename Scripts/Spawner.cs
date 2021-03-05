@@ -6,13 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public Rigidbody car;
     public GameObject road;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (CurrentPosition(car.gameObject) >= CurrentPosition(road) - road.transform.localScale.z)
