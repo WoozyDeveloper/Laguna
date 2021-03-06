@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OtherCarScript : MonoBehaviour
+public class OtherCar : MonoBehaviour
 {
     private float speedMovement;
     public CarMovement playerCar;
@@ -15,7 +15,7 @@ public class OtherCarScript : MonoBehaviour
         speedMovement = Random.Range(0, 10f);
     }
 
-    
+
     void Update()
     {
         currentCar.velocity = new Vector3(0f, 0f, speedMovement);
@@ -23,8 +23,8 @@ public class OtherCarScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
-            playerCar.Death();
+        //if (collision.gameObject.tag == "Player")
+        //    playerCar.Death();
 
     }
 }

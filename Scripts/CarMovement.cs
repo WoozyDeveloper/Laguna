@@ -20,21 +20,15 @@ public class CarMovement : MonoBehaviour
         car.velocity = new Vector3(0, 0, 2 * carSpeed);
         if (Input.GetKey(KeyCode.D))
         {
-            if(car.velocity.z <= 0f)
+            if (car.velocity.z <= 0f)
                 car.velocity = new Vector3(0f, 0f, car.velocity.z);
             car.AddForce(new Vector3(carSpeed / 2f, 0f, 0f), ForceMode.Impulse); ;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            if(car.velocity.z >= 0f)
+            if (car.velocity.z >= 0f)
                 car.velocity = new Vector3(0f, 0f, car.velocity.z);
             car.AddForce(new Vector3(-carSpeed / 2f, 0f, 0f), ForceMode.Impulse);
         }
-    }
-
-    public void Death()
-    {
-        Debug.Log("---DEATH---");
-        transform.position = new Vector3(0f, 0.5f, 0f);
     }
 }
