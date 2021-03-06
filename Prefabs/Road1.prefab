@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2868265739781316687}
   - component: {fileID: 3642501917417835313}
   m_Layer: 0
-  m_Name: Road
+  m_Name: Road1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6021460516881845166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2680616, y: 0.2587471, z: 16.63}
+  m_LocalPosition: {x: 2.2680616, y: 0, z: 16.63}
   m_LocalScale: {x: 1.5901, y: 1, z: 4.5268717}
   m_Children: []
   m_Father: {fileID: 0}
@@ -109,5 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddd82dfcdb0ae845833ac6398e7c696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 5926845285986415059, guid: 37348cdf0e4fd4e4685261acf124a866, type: 3}
-  road: {fileID: 0}
+  road1: {fileID: 6021460516881845166}
+  road2: {fileID: 3144711272680187288, guid: a78fa7619a37d744cb3c3ace319936f9, type: 3}

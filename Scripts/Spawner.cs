@@ -4,20 +4,33 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Rigidbody car;
-    public GameObject road;
+    private int roadNumber;
+    private CarMovement car;
+    public GameObject road1, road2;
+
+    void Start()
+    {
+        roadNumber = 1;
+        car = FindObjectOfType<CarMovement>();
+    }
 
     void Update()
     {
-        if (CurrentPosition(car.gameObject) >= CurrentPosition(road) - road.transform.localScale.z)
+        if (car.transform.position.z - road1.transform.position.z >= 50f) 
         {
-            Instantiate(road, new Vector3(car.transform.position.x, car.transform.position.y, car.transform.position.z + 50f),
-                Quaternion.Euler(Vector3.zero));
+            if (roadNumber % 2 == 1) //road1
+            {
+                Instantiate(road1, new Vector3(road1.transform.position.x, road1.transform.position.y, car.transform.position.z + roadNumber * 50f),
+                    Quaternion.identity);
+                Destroy(road1.gameObject);
+            }
+            else //road2
+            {
+                Instantiate(road2, new Vector3(road1.transform.position.x, road1.transform.position.y, car.transform.position.z + roadNumber * 50f),
+                    Quaternion.identity);
+                Destroy(road2.gameObject);
+            }
+            roadNumber++;
         }
-    }
-
-    double CurrentPosition(GameObject obj)
-    {
-        return obj.transform.position.z;
     }
 }
