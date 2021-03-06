@@ -11,8 +11,17 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         car = FindObjectOfType<CarMovement>();
+        StartLevel();
     }
 
+    void StartLevel()
+    {
+        Instantiate(road, new Vector3(0f, 0f, 0f), Quaternion.Euler(0, 0, 0));
+        Instantiate(road, new Vector3(0f, 0f, 50f), Quaternion.Euler(0, 0, 0));
+        Instantiate(road, new Vector3(0f, 0f, 100f), Quaternion.Euler(0, 0, 0));
+        Instantiate(road, new Vector3(0f, 0f, 150f), Quaternion.Euler(0, 0, 0));
+        Instantiate(road, new Vector3(0f, 0f, 200f), Quaternion.Euler(0, 0, 0));
+    }
     void Update()
     {
         if (car.transform.position.z - road.transform.position.z >= road.transform.localScale.z * 10f) 

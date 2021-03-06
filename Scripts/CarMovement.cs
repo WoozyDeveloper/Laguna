@@ -31,4 +31,10 @@ public class CarMovement : MonoBehaviour
             car.AddForce(new Vector3(-carSpeed / 2f, 0f, 0f), ForceMode.Impulse);
         }
     }
+
+    public void Death()
+    {
+        Debug.Log("---DEATH---");
+        transform.position = new Vector3(0f, 0.5f, 0f);
+    }
 }
