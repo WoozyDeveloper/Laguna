@@ -20,9 +20,9 @@ public class OtherCar : MonoBehaviour
 
     void Update()
     {
-        //TODO: add a method to spawn the cars
+        //TODO: add a method to spawn the cars + switch b 1,2,3 ???
         currentCar.velocity = new Vector3(0f, 0f, speedMovement);
-        if(num == 5 && currentCar.transform.position.x < 5.5f)
+        if(num %2 ==0 && currentCar.transform.position.x < 5.5f && currentCar.transform.position.z - playerCar.transform.position.z < 40f)
         {
             Vector3 newPosition = new Vector3(currentCar.transform.position.x + 1f,
                                           currentCar.transform.position.y,
