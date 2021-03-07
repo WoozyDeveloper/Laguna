@@ -7,7 +7,7 @@ public class OtherCar : MonoBehaviour
     private float speedMovement;
     private CarMovement playerCar;
     private Rigidbody currentCar;
-    int num;
+    int num, direction;
     void Start()
     {
         currentCar = GetComponent<Rigidbody>();
@@ -15,6 +15,7 @@ public class OtherCar : MonoBehaviour
 
         speedMovement = Random.Range(0, 10f);
         num = Random.Range(1, 20);
+        direction = Random.Range(-2, 1);// [-1,1)
     }
 
 
@@ -22,13 +23,16 @@ public class OtherCar : MonoBehaviour
     {
         //TODO: add a method to spawn the cars + switch b 1,2,3 ???
         currentCar.velocity = new Vector3(0f, 0f, speedMovement);
-        if(num %2 ==0 && currentCar.transform.position.x < 5.5f && currentCar.transform.position.z - playerCar.transform.position.z < 40f)
+        if(currentCar.transform.position.x > -6f && currentCar.transform.position.x < 5.5f && currentCar.transform.position.z - playerCar.transform.position.z < 40f)
         {
-            Vector3 newPosition = new Vector3(currentCar.transform.position.x + 1f,
+
+            if (direction == 0) ++direction;
+            Vector3 newPosition = new Vector3(currentCar.transform.position.x * direction * 50,
                                           currentCar.transform.position.y,
                                           currentCar.transform.position.z);
             currentCar.transform.position = Vector3.MoveTowards(transform.position, newPosition, 5 * Time.deltaTime);
         }
+
         if (playerCar.transform.position.z - this.transform.position.z >= 20f)
         {
             Debug.Log("---CAR DESTROYED---");
