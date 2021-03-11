@@ -4,36 +4,48 @@ using UnityEngine;
 
 public class OtherCar : MonoBehaviour
 {
+    public float[] oxPositions = new float[4];
     private float speedMovement;
     private CarMovement playerCar;
     private Rigidbody currentCar;
-    int num, direction;
+    int direction;
     void Start()
     {
         currentCar = GetComponent<Rigidbody>();
         playerCar = FindObjectOfType<CarMovement>();
 
         speedMovement = Random.Range(0, 10f);
-        num = Random.Range(1, 20);
-        direction = Random.Range(-2, 1);// [-1,1)
+        direction = Random.Range(0, 2);
     }
 
 
     void Update()
     {
-        //TODO: add a method to spawn the cars + switch b 1,2,3 ???
         currentCar.velocity = new Vector3(0f, 0f, speedMovement);
-        if(currentCar.transform.position.x > -6f && currentCar.transform.position.x < 5.5f && currentCar.transform.position.z - playerCar.transform.position.z < 40f)
+        if(currentCar.transform.position.z - playerCar.transform.position.z < 40f)
         {
-
-            if (direction == 0) ++direction;
-            Vector3 newPosition = new Vector3(currentCar.transform.position.x * direction * 50,
-                                          currentCar.transform.position.y,
-                                          currentCar.transform.position.z);
-            currentCar.transform.position = Vector3.MoveTowards(transform.position, newPosition, 5 * Time.deltaTime);
+            Vector3 newPosition = new Vector3(0f, 0f, 0f);
+            float oxPosition = 0f;
+            if (direction == 0)//switch on right
+            {
+                if (currentCar.transform.position.x >= 2f && currentCar.transform.position.x < 6f)
+                    oxPosition = currentCar.transform.position.x + 4f;
+                else
+                    oxPosition = currentCar.transform.position.x - 4f;
+            }
+            else//switch on left
+            {
+                if (currentCar.transform.position.x <= -2f && currentCar.transform.position.x > -6f)
+                    oxPosition = currentCar.transform.position.x - 4f;
+                else
+                    oxPosition = currentCar.transform.position.x + 4f;
+            }
+            newPosition = new Vector3(oxPosition, currentCar.transform.position.y,
+                                              currentCar.transform.position.z);
+            currentCar.transform.position = Vector3.MoveTowards(currentCar.transform.position, newPosition, 5 * Time.deltaTime);
         }
 
-        if (playerCar.transform.position.z - this.transform.position.z >= 20f)
+        if (playerCar.transform.position.z - currentCar.transform.position.z >= 20f)
         {
             Debug.Log("---CAR DESTROYED---");
             Destroy(gameObject);
