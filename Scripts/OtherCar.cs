@@ -8,6 +8,7 @@ public class OtherCar : MonoBehaviour
     private float speedMovement;
     private CarMovement playerCar;
     private Rigidbody currentCar;
+    float oxPosition = 100f;
     int direction;
     void Start()
     {
@@ -22,10 +23,10 @@ public class OtherCar : MonoBehaviour
     void Update()
     {
         currentCar.velocity = new Vector3(0f, 0f, speedMovement);
-        if(currentCar.transform.position.z - playerCar.transform.position.z < 40f)
+        if(currentCar.transform.position.x != oxPosition&& currentCar.transform.position.z - playerCar.transform.position.z < 40f)
         {
             Vector3 newPosition = new Vector3(0f, 0f, 0f);
-            float oxPosition = 0f;
+            
             if (direction == 0)//switch on right
             {
                 if (currentCar.transform.position.x >= 2f && currentCar.transform.position.x < 6f)
