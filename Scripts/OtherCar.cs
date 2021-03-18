@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class OtherCar : MonoBehaviour
 {
+    bool changed = false;
     public float[] oxPositions = new float[4];
     private float speedMovement;
     private CarMovement playerCar;
     private Rigidbody currentCar;
-    float oxPosition = 100f;
     int direction;
     void Start()
     {
@@ -22,28 +22,35 @@ public class OtherCar : MonoBehaviour
 
     void Update()
     {
-        currentCar.velocity = new Vector3(0f, 0f, speedMovement);
-        if(currentCar.transform.position.x != oxPosition&& currentCar.transform.position.z - playerCar.transform.position.z < 40f)
+        if (currentCar.velocity.x > 0f)
+            currentCar.velocity = new Vector3(0f, 0f, speedMovement);
+        else
+            currentCar.velocity = new Vector3(0f, 0f, -speedMovement);
+        if (currentCar.transform.position.x < 0f) //left side
         {
+            float oxPosition;
             Vector3 newPosition = new Vector3(0f, 0f, 0f);
-            
-            if (direction == 0)//switch on right
+            if(currentCar.transform.position.x == -6f && changed == false) //edge
             {
-                if (currentCar.transform.position.x >= 2f && currentCar.transform.position.x < 6f)
-                    oxPosition = currentCar.transform.position.x + 4f;
-                else
-                    oxPosition = currentCar.transform.position.x - 4f;
+                changed = true;
+                oxPosition = -4f;
+                newPosition = new Vector3(oxPosition, currentCar.transform.position.y,
+                                            currentCar.transform.position.z);
+                currentCar.transform.position = Vector3.MoveTowards(currentCar.transform.position, newPosition, 1 * Time.deltaTime);
             }
-            else//switch on left
+            else if(currentCar.transform.position.x == -2f && changed == false)//inside
             {
-                if (currentCar.transform.position.x <= -2f && currentCar.transform.position.x > -6f)
-                    oxPosition = currentCar.transform.position.x - 4f;
-                else
-                    oxPosition = currentCar.transform.position.x + 4f;
+                changed = true;
+                oxPosition = -6f;
+                newPosition = new Vector3(oxPosition, currentCar.transform.position.y,
+                                            currentCar.transform.position.z);
+                currentCar.transform.position = Vector3.MoveTowards(currentCar.transform.position, newPosition, 1 * Time.deltaTime);
             }
-            newPosition = new Vector3(oxPosition, currentCar.transform.position.y,
-                                              currentCar.transform.position.z);
-            currentCar.transform.position = Vector3.MoveTowards(currentCar.transform.position, newPosition, 5 * Time.deltaTime);
+           
+        }
+        else //right side
+        {
+
         }
 
         if (playerCar.transform.position.z - currentCar.transform.position.z >= 20f)
@@ -52,7 +59,6 @@ public class OtherCar : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
