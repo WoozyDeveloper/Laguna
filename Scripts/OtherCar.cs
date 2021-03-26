@@ -22,6 +22,9 @@ public class OtherCar : MonoBehaviour
 
         speedMovement = Random.Range(0, 10f);
 
+        if (transform.position.x < 0f)
+            transform.rotation = new Quaternion(-1, 0, 0, 0);
+
         if (transform.position.x == 2f || transform.position.x == -6f)
             changedToRight = true;//can go only to the right lane
         else if (transform.position.x == 6f || transform.position.x == -2f)
