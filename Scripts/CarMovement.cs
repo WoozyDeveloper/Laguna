@@ -34,7 +34,6 @@ public class CarMovement : MonoBehaviour
 
     public void Death()
     {
-        Debug.Log("---DEATH---");
         this.transform.position = new Vector3(0f, 0f, 0f);
     }
 }

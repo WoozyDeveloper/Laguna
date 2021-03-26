@@ -17,7 +17,6 @@ public class Spawner : MonoBehaviour
     {
         if (car.transform.position.z - road.transform.position.z >= road.transform.localScale.z * 10f)
         {
-            Debug.Log("---Spawn---");
             Instantiate(road, new Vector3(road.transform.position.x, road.transform.position.y, road.transform.position.z + startingRoadsNum * 10 * road.transform.localScale.z),
                  Quaternion.identity);
             Destroy(gameObject);
