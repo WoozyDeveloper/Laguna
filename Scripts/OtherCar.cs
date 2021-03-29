@@ -84,5 +84,6 @@ public class OtherCar : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
             playerCar.Death();
+        //
     }
 }

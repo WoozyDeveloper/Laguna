@@ -110,3 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   road: {fileID: 6021460516881845166}
+  spawningCar: {fileID: 4521072189201317509, guid: 38b5572411d10f64599b9130bb6bc026,
+    type: 3}
