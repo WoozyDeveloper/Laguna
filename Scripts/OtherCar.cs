@@ -35,8 +35,11 @@ public class OtherCar : MonoBehaviour
 
     void Update()
     {
-        currentCar.velocity = new Vector3(0, 0, speedMovement);
-        if(wannaChangeTheLane < 0 && currentCar.transform.position.z - playerCar.transform.position.z <= 20f)
+        if(currentCar.transform.position.x >= 0f)
+            currentCar.velocity = new Vector3(0, 0, speedMovement);
+        else
+            currentCar.velocity = new Vector3(0, 0, -speedMovement);
+        if (wannaChangeTheLane < 0 && currentCar.transform.position.z - playerCar.transform.position.z <= 20f)
             ChangeLane();
 
         if (playerCar.transform.position.z - currentCar.transform.position.z >= 20f)
@@ -75,8 +78,6 @@ public class OtherCar : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
             }
         }
-
-
     }
 
     private void OnCollisionEnter(Collision collision)

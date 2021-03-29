@@ -18,6 +18,11 @@ public class Spawner : MonoBehaviour
         SpawnTerrain();
     }
 
+    private void SpawnCars()
+    {
+        //add spawner for the cars
+    }
+
     private void SpawnTerrain()
     {
         if (car.transform.position.z - road.transform.position.z >= road.transform.localScale.z * 10f)
