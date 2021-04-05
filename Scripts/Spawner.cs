@@ -18,17 +18,6 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         SpawnTerrain();
-        SpawnCars();
-    }
-
-    private void SpawnCars()
-    {
-        if (car.transform.position.z - road.transform.position.z >= road.transform.localScale.z * 10f)
-        {
-            Instantiate(spawningCar, new Vector3(spawningCar.transform.position.x, spawningCar.transform.position.y, spawningCar.transform.position.z + startingRoadsNum * 10 * road.transform.localScale.z),
-                 Quaternion.identity);
-            Destroy(gameObject);
-        }
     }
 
     private void SpawnTerrain()

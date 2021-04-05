@@ -114,6 +114,7 @@ MonoBehaviour:
   - -2
   - 2
   - 6
+  spawnDistance: 150
 --- !u!54 &2881328246268211256
 Rigidbody:
   m_ObjectHideFlags: 0
