@@ -21,7 +21,7 @@ public class OtherCar : MonoBehaviour
         currentCar = GetComponent<Rigidbody>();
         playerCar = FindObjectOfType<CarMovement>();
 
-        speedMovement = Random.Range(0, 10f);
+        speedMovement = Random.Range(5f, 15f);
 
         //orientation of the cars
         if (transform.position.x < 0f)
@@ -99,10 +99,23 @@ public class OtherCar : MonoBehaviour
     {
         if (collision.gameObject.tag == "OtherCar")
         {
-            if(currentCar.velocity.z > collision.rigidbody.velocity.z)
-                currentCar.velocity = new Vector3(currentCar.velocity.x, currentCar.velocity.y, currentCar.velocity.z - 5f);
+            if (currentCar.velocity.z > 0f)//forward
+            {
+                if (currentCar.velocity.z > collision.rigidbody.velocity.z && 
+                    currentCar.transform.position.z < collision.rigidbody.transform.position.z)
+                    speedMovement -= 5f;
+                else
+                    speedMovement += 5f;
+            }
             else
-                currentCar.velocity = new Vector3(currentCar.velocity.x, currentCar.velocity.y, currentCar.velocity.z + 5f);
+            {
+                if (currentCar.velocity.z > collision.rigidbody.velocity.z &&
+                    currentCar.transform.position.z < collision.rigidbody.transform.position.z)
+                    speedMovement += 5f;
+                else
+                    speedMovement -= 5f;
+            }
+            
         }
         else if (collision.gameObject.tag == "Player")
             playerCar.Death();
