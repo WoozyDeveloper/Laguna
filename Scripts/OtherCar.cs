@@ -25,7 +25,7 @@ public class OtherCar : MonoBehaviour
 
         //orientation of the cars
         if (transform.position.x < 0f)
-            transform.rotation = new Quaternion(-1, 0, 0, 0);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
 
         //can go only to the right lane
         if (transform.position.x == 2f || transform.position.x == -6f)
@@ -108,7 +108,7 @@ public class OtherCar : MonoBehaviour
                     speedMovement += 5f;
             }
             else
-            {
+            { 
                 if (currentCar.velocity.z > collision.rigidbody.velocity.z &&
                     currentCar.transform.position.z < collision.rigidbody.transform.position.z)
                     speedMovement += 5f;
