@@ -25,7 +25,7 @@ public class OtherCar : MonoBehaviour
 
         //orientation of the cars
         if (transform.position.x < 0f)
-            transform.rotation = new Quaternion(0, 0, 0, 0);
+            transform.eulerAngles = new Vector3(0, -180, 0);
 
         //can go only to the right lane
         if (transform.position.x == 2f || transform.position.x == -6f)

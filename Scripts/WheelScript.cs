@@ -10,7 +10,7 @@ public class WheelScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rotationSpeed = 50;//deg
+        rotationSpeed = 50;
         wheel = GetComponent<GameObject>();
     }
 
