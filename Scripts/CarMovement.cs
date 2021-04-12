@@ -7,12 +7,14 @@ public class CarMovement : MonoBehaviour
     //right, left OX
     //up, down OY
     //front, back OZ
+    CameraScript myCamera;
     private Rigidbody car;
     public float carSpeed;
 
     void Start()
     {
         car = GetComponent<Rigidbody>();
+        myCamera = FindObjectOfType<CameraScript>();
     }
 
     void Update()
@@ -22,13 +24,15 @@ public class CarMovement : MonoBehaviour
         {
             if (car.velocity.z <= 0f)
                 car.velocity = new Vector3(0f, 0f, car.velocity.z);
-            car.AddForce(new Vector3(carSpeed / 2f, 0f, 0f), ForceMode.Impulse); ;
+            car.AddForce(new Vector3(carSpeed / 2f, 0f, 0f), ForceMode.Impulse);
+            myCamera.oxDirection = 4;
         }
         else if (Input.GetKey(KeyCode.A))
         {
             if (car.velocity.z >= 0f)
                 car.velocity = new Vector3(0f, 0f, car.velocity.z);
             car.AddForce(new Vector3(-carSpeed / 2f, 0f, 0f), ForceMode.Impulse);
+            myCamera.oxDirection = -4;
         }
     }
 
