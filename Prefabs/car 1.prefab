@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7584753876394174163}
   - component: {fileID: 9151505137485776039}
   - component: {fileID: 6236178466943486525}
+  - component: {fileID: 864841153766899740}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &864841153766899740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558986650046296802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91a570dd2320e44b917bbff43611a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheel: {fileID: 558986650046296802}
+  rotationSpeed: 20
 --- !u!1 &1415465085421745917
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +191,7 @@ GameObject:
   - component: {fileID: 1977242703591287630}
   - component: {fileID: 5386999968946667545}
   - component: {fileID: 6448536548989083673}
+  - component: {fileID: 5137863997031333568}
   m_Layer: 0
   m_Name: Cylinder.002
   m_TagString: Untagged
@@ -246,6 +262,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5137863997031333568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726622627957414900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91a570dd2320e44b917bbff43611a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheel: {fileID: 1726622627957414900}
+  rotationSpeed: 20
 --- !u!1 &4159541741864075699
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +372,7 @@ GameObject:
   - component: {fileID: 7564650482423475763}
   - component: {fileID: 900511793703005427}
   - component: {fileID: 6294101250300974168}
+  - component: {fileID: 4469188718236608721}
   m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
@@ -412,6 +443,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4469188718236608721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4854754153629916625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91a570dd2320e44b917bbff43611a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheel: {fileID: 4854754153629916625}
+  rotationSpeed: 20
 --- !u!1 &5604711500635905012
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +468,7 @@ GameObject:
   - component: {fileID: 8924544674814359334}
   - component: {fileID: 8628650210879686783}
   - component: {fileID: 4239021539568506715}
+  - component: {fileID: 6593577103116274931}
   m_Layer: 0
   m_Name: Cylinder.003
   m_TagString: Untagged
@@ -493,3 +539,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6593577103116274931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5604711500635905012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91a570dd2320e44b917bbff43611a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheel: {fileID: 5604711500635905012}
+  rotationSpeed: 20
