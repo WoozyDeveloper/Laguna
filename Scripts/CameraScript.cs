@@ -19,11 +19,8 @@ public class CameraScript : MonoBehaviour
 
     void Update()
     {
-        Vector3 newPosition = new Vector3(carMovement.gameObject.transform.position.x - oxDirection,
-                                          carMovement.gameObject.transform.position.y + oyCameraPosition,
-                                          carMovement.gameObject.transform.position.z - ozCameraPosition);
-        transform.position = new Vector3(transform.position.x, transform.position.y, carMovement.transform.position.z - 5);
-        transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
+        transform.position = new Vector3(carMovement.transform.position.x, transform.position.y, carMovement.transform.position.z - 5);
+        //transform.position = Vector3.MoveTowards(transform.position, newPosition, 20 * Time.deltaTime);
 
         
     }

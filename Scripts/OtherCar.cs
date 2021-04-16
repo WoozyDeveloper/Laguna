@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class OtherCar : MonoBehaviour
 {
     #region variables
+    Sensor sensor;
     Scene currentScene;
     bool changedToLeft = false, changedToRight = false;//used in change lane to see if the car already switched a lane or not
     public float[] oxPositions = new float[4];//main positions on ox for the cars
@@ -20,6 +21,7 @@ public class OtherCar : MonoBehaviour
         #region Basic Inits
         currentCar = GetComponent<Rigidbody>();
         playerCar = FindObjectOfType<CarMovement>();
+        sensor = FindObjectOfType<Sensor>();
 
         speedMovement = Random.Range(5f, 15f);
 
@@ -65,13 +67,13 @@ public class OtherCar : MonoBehaviour
     {
         if (currentCar.transform.position.x >= 0f)//right side of the road
         {
-            if (currentCar.transform.position.x <= 6f && changedToRight == true)
+            if (sensor.SensorResult() == 1 && currentCar.transform.position.x <= 6f && changedToRight == true)
             {
                 float oxPosition = 6f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
             }
-            else if (currentCar.transform.position.x >= 2f && changedToLeft == true)
+            else if (sensor.SensorResult() == -1 && currentCar.transform.position.x >= 2f && changedToLeft == true)
             {
                 float oxPosition = 2f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
@@ -80,13 +82,13 @@ public class OtherCar : MonoBehaviour
         }
         else//left side of the road
         {
-            if (currentCar.transform.position.x <= -2f && changedToRight == true)
+            if (sensor.SensorResult() == 1 && currentCar.transform.position.x <= -2f && changedToRight == true)
             {
                 float oxPosition = -2f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
             }
-            else if (currentCar.transform.position.x >= -6f && changedToLeft == true)
+            else if (sensor.SensorResult() == -1 && currentCar.transform.position.x >= -6f && changedToLeft == true)
             {
                 float oxPosition = -6f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
