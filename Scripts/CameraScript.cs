@@ -14,6 +14,7 @@ public class CameraScript : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         carMovement = FindObjectOfType<CarMovement>();
+        cam.transform.rotation = new Quaternion(xQuat, 0, 0, wQuat);
     }
 
     void Update()
@@ -24,6 +25,6 @@ public class CameraScript : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, carMovement.transform.position.z - 5);
         transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
 
-        cam.transform.rotation = new Quaternion(xQuat, 0, 0, wQuat);
+        
     }
 }
