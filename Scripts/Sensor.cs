@@ -14,6 +14,7 @@ public class Sensor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Physics.IgnoreCollision(transform.GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
         if (transform.tag == "LeftSensor")
         {
             if (collision.gameObject.tag == "OtherCar")
