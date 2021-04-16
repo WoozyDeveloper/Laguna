@@ -43,13 +43,16 @@ public class OtherCar : MonoBehaviour
 
     void Update()
     {
-        if(currentCar.transform.position.x >= 0f)
+        if (transform.position.x == 2f || transform.position.x == -6f)
+            changedToRight = true;
+
+        if (currentCar.transform.position.x >= 0f)
             currentCar.velocity = new Vector3(0, 0, speedMovement);
         else
             currentCar.velocity = new Vector3(0, 0, -speedMovement);
         if (wannaChangeTheLane < 0 && currentCar.transform.position.z - playerCar.transform.position.z <= 20f)
             ChangeLane();
-
+        Debug.Log(sensor.SensorResult());
         RespawnCar();
     }
 

@@ -13,6 +13,7 @@ public class CarMovement : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 160;
         car = GetComponent<Rigidbody>();
         myCamera = FindObjectOfType<CameraScript>();
     }
@@ -33,6 +34,10 @@ public class CarMovement : MonoBehaviour
                 car.velocity = new Vector3(0f, 0f, car.velocity.z);
             car.AddForce(new Vector3(-carSpeed / 2f, 0f, 0f), ForceMode.Impulse);
             myCamera.oxDirection = -4;
+        }
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            car.velocity = new Vector3(0, 0, 10 * carSpeed);
         }
     }
 
