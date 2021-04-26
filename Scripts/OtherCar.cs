@@ -14,11 +14,13 @@ public class OtherCar : MonoBehaviour
     private Rigidbody currentCar;
     private int wannaChangeTheLane;
 
-    public Sensors rightSensor, leftSensor;
+    public Sensors rightSensor, leftSensor;//sensors for switching lanes vrum vrum!!!
     #endregion
     void Start()
     {
         #region Basic Inits
+
+        spawnDistance = 250f;//behind your car <--250f--> in front unseen
 
         currentCar = GetComponent<Rigidbody>();
         playerCar = FindObjectOfType<CarMovement>();
@@ -46,6 +48,8 @@ public class OtherCar : MonoBehaviour
     {
         if (transform.position.x == 2f || transform.position.x == -6f)
             changedToRight = true;
+        if (transform.position.x == 6f || transform.position.x == -2f)
+            changedToLeft = true;
 
         if (currentCar.transform.position.x >= 0f)
             currentCar.velocity = new Vector3(0, 0, speedMovement);
@@ -103,27 +107,8 @@ public class OtherCar : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "OtherCar")
-        {
-            if (currentCar.velocity.z > 0f)//forward
-            {
-                if (currentCar.velocity.z > collision.rigidbody.velocity.z && 
-                    currentCar.transform.position.z < collision.rigidbody.transform.position.z)
-                    speedMovement -= 5f;
-                else
-                    speedMovement += 5f;
-            }
-            else
-            { 
-                if (currentCar.velocity.z > collision.rigidbody.velocity.z &&
-                    currentCar.transform.position.z < collision.rigidbody.transform.position.z)
-                    speedMovement += 5f;
-                else
-                    speedMovement -= 5f;
-            }
-            
-        }
+            ChangeLane();
         else if (collision.gameObject.tag == "Player")
             playerCar.Death();
-        
     }
 }
