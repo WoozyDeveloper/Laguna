@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class OtherCar : MonoBehaviour
 {
     #region variables
+    public BlinkerScript leftBlinker,rightBlinker;//for the blinker
+
     bool changedToLeft = false, changedToRight = false;//used in change lane to see if the car already switched a lane or not
     public float[] oxPositions = new float[4];//main positions on ox for the cars
     public float spawnDistance;//spawning distance of the cars
@@ -56,7 +58,11 @@ public class OtherCar : MonoBehaviour
         else
             currentCar.velocity = new Vector3(0, 0, -speedMovement);
         if (wannaChangeTheLane < 0 && currentCar.transform.position.z - playerCar.transform.position.z <= 20f)
+        {
             ChangeLane();
+           // leftBlinker.stopBlinking();
+            //rightBlinker.stopBlinking();
+        }
 
         RespawnCar();
     }
@@ -77,12 +83,14 @@ public class OtherCar : MonoBehaviour
         {
             if (currentCar.transform.position.x <= 6f && changedToRight == true)
             {
+                rightBlinker.changeState();
                 float oxPosition = 6f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
             }
             else if (currentCar.transform.position.x >= 2f && changedToLeft == true)
             {
+                leftBlinker.changeState();
                 float oxPosition = 2f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
@@ -92,12 +100,14 @@ public class OtherCar : MonoBehaviour
         {
             if (currentCar.transform.position.x <= -2f && changedToRight == true)
             {
+                rightBlinker.changeState();
                 float oxPosition = -2f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
             }
             else if (currentCar.transform.position.x >= -6f && changedToLeft == true)
             {
+                leftBlinker.changeState();
                 float oxPosition = -6f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);

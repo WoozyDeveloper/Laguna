@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 1116147269621877461}
   - component: {fileID: 4554275850623182735}
   m_Layer: 0
-  m_Name: Cube.006
+  m_Name: leftBlinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 2490499991037547169}
   - component: {fileID: 6033982057633945994}
   m_Layer: 0
-  m_Name: Cube.007
+  m_Name: rightBlinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,6 +1451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1b4367094054246b17bc75f7e5c90f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftBlinker: {fileID: 4554275850623182735}
+  rightBlinker: {fileID: 6033982057633945994}
   oxPositions:
   - 0
   - 0

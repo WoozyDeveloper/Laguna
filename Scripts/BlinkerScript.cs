@@ -12,29 +12,37 @@ public class BlinkerScript : MonoBehaviour
     void Start()
     {
         blinkerRenderer = GetComponent<Renderer>();
-        startBlink = true;
+        startBlink = false;
         change = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (countdown > 0)
+        if (startBlink == true)
         {
-            countdown -= Time.deltaTime;
-        }
-        else
-        {
-            countdown = .2f;
-            if (change == false)
-                blinkerRenderer.material.SetColor("_Color", Color.yellow);
+            if (countdown > 0)
+            {
+                countdown -= Time.deltaTime;
+            }
             else
-                blinkerRenderer.material.SetColor("_Color", Color.black);
+            {
+                countdown = .2f;
+                if (change == false)
+                    blinkerRenderer.material.SetColor("_Color", Color.yellow);
+                else
+                    blinkerRenderer.material.SetColor("_Color", Color.black);
+            }
+            change = !change;
         }
-        change = !change;
     }
 
-    void changeState()
+    public void stopBlinking()
+    {
+        change = false;
+    }
+
+    public void changeState()
     {
         startBlink = !startBlink;
     }
