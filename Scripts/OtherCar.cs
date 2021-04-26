@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class OtherCar : MonoBehaviour
 {
     #region variables
-    Sensor sensor;
-    Scene currentScene;
     bool changedToLeft = false, changedToRight = false;//used in change lane to see if the car already switched a lane or not
     public float[] oxPositions = new float[4];//main positions on ox for the cars
     public float spawnDistance;//spawning distance of the cars
@@ -15,13 +13,15 @@ public class OtherCar : MonoBehaviour
     private CarMovement playerCar;
     private Rigidbody currentCar;
     private int wannaChangeTheLane;
+
+    public Sensors rightSensor, leftSensor;
     #endregion
     void Start()
     {
         #region Basic Inits
+
         currentCar = GetComponent<Rigidbody>();
         playerCar = FindObjectOfType<CarMovement>();
-        sensor = FindObjectOfType<Sensor>();
 
         speedMovement = Random.Range(5f, 15f);
 
@@ -37,6 +37,7 @@ public class OtherCar : MonoBehaviour
         else if (transform.position.x == 6f || transform.position.x == -2f)
             changedToLeft = true;
         #endregion
+
         //for P = 1/5
         wannaChangeTheLane = Random.Range(-1, 4);
     }
@@ -52,14 +53,14 @@ public class OtherCar : MonoBehaviour
             currentCar.velocity = new Vector3(0, 0, -speedMovement);
         if (wannaChangeTheLane < 0 && currentCar.transform.position.z - playerCar.transform.position.z <= 20f)
             ChangeLane();
-        Debug.Log(sensor.SensorResult());
+
         RespawnCar();
     }
 
     private void RespawnCar()
     {
         Vector3 oldPosition = currentCar.transform.position;
-        if (playerCar.transform.position.z - currentCar.transform.position.z >= 20f)
+        if (playerCar.transform.position.z - currentCar.transform.position.z >= 5f)
         {
             Instantiate(currentCar, new Vector3(oldPosition.x, oldPosition.y, oldPosition.z + spawnDistance), Quaternion.Euler(0f,0f,0f));
             Destroy(gameObject);
@@ -70,13 +71,13 @@ public class OtherCar : MonoBehaviour
     {
         if (currentCar.transform.position.x >= 0f)//right side of the road
         {
-            if (sensor.SensorResult() == 1 && currentCar.transform.position.x <= 6f && changedToRight == true)
+            if (currentCar.transform.position.x <= 6f && changedToRight == true)
             {
                 float oxPosition = 6f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
             }
-            else if (sensor.SensorResult() == -1 && currentCar.transform.position.x >= 2f && changedToLeft == true)
+            else if (currentCar.transform.position.x >= 2f && changedToLeft == true)
             {
                 float oxPosition = 2f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
@@ -85,13 +86,13 @@ public class OtherCar : MonoBehaviour
         }
         else//left side of the road
         {
-            if (sensor.SensorResult() == 1 && currentCar.transform.position.x <= -2f && changedToRight == true)
+            if (currentCar.transform.position.x <= -2f && changedToRight == true)
             {
                 float oxPosition = -2f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
             }
-            else if (sensor.SensorResult() == -1 && currentCar.transform.position.x >= -6f && changedToLeft == true)
+            else if (currentCar.transform.position.x >= -6f && changedToLeft == true)
             {
                 float oxPosition = -6f;
                 Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
@@ -99,7 +100,6 @@ public class OtherCar : MonoBehaviour
             }
         }
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "OtherCar")
