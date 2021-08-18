@@ -43,25 +43,31 @@ public class OtherCar : MonoBehaviour
         #endregion
 
         //for P = 1/5
-        wannaChangeTheLane = Random.Range(-1, 4);
+        wannaChangeTheLane = -1;
     }
 
     void Update()
     {
+        #region Car positioning
         if (transform.position.x == 2f || transform.position.x == -6f)
             changedToRight = true;
         if (transform.position.x == 6f || transform.position.x == -2f)
             changedToLeft = true;
+        #endregion
 
+        #region Movement of the car
         if (currentCar.transform.position.x >= 0f)
             currentCar.velocity = new Vector3(0, 0, speedMovement);
         else
             currentCar.velocity = new Vector3(0, 0, -speedMovement);
-        if (wannaChangeTheLane < 0 && currentCar.transform.position.z - playerCar.transform.position.z <= 20f)
+        #endregion
+
+        if (wannaChangeTheLane < 0 && Mathf.Abs(currentCar.transform.position.z - playerCar.transform.position.z) <= 20f)
         {
             ChangeLane();
-           // leftBlinker.stopBlinking();
-            //rightBlinker.stopBlinking();
+            Debug.Log("Caram cantam! Noi caram, dar si cantam!");
+            // leftBlinker.stopBlinking();
+            // rightBlinker.stopBlinking();
         }
 
         RespawnCar();
@@ -116,8 +122,11 @@ public class OtherCar : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "OtherCar")
+        if (collision.gameObject.tag != "OtherCar")
+        {
             ChangeLane();
+            
+        }
         else if (collision.gameObject.tag == "Player")
             playerCar.Death();
     }
