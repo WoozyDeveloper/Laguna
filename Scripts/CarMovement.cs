@@ -11,7 +11,8 @@ public class CarMovement : MonoBehaviour
     private const float turnSpeed = 7f;
     CameraScript myCamera;
     private Rigidbody car;
-    private float carSpeed = 10;
+    public float carSpeed = 10;//  10 ->  50[0, 0,  -24]
+    //. . . . . . . . . . . . .// 100 -> 220[0, 0, -171]
 
 
     void Start()
@@ -64,14 +65,14 @@ public class CarMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             if (carSpeed <= 100f)//100 is the max speed
-                carSpeed += 2f;
+                carSpeed += 0.5f;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-20, 0, 0), 10 * Time.deltaTime);
         }
         else//hoo prrr easy easy
             if (carSpeed >= 15f)
             {
                 //TODO: LIGHTS!
-                carSpeed -= 0.2f;
+                carSpeed -= 0.3f;
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(20, 0, 0), 10 * Time.deltaTime);
             }
     }
