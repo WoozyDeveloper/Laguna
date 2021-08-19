@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CarMovement : MonoBehaviour
 {
     //right, left OX
     //up, down OY
     //front, back OZ
+    public GameObject redArrow;
     private const float turnSpeed = 7f;
     CameraScript myCamera;
     private Rigidbody car;
-    public float carSpeed = 10;//  10 ->  50[0, 0,  -24]
+    private float carSpeed = 10;//  10 ->  50[0, 0,  -24]
     //. . . . . . . . . . . . .// 100 -> 220[0, 0, -171]
 
 
@@ -24,6 +26,8 @@ public class CarMovement : MonoBehaviour
 
     void Update()
     {
+        redArrow.transform.rotation = Quaternion.Slerp(redArrow.transform.rotation, Quaternion.Euler(0, 0, -carSpeed + 50), Time.deltaTime);
+
         car.velocity = new Vector3(0, 0, carSpeed);
         Vector2 mousePos = Input.mousePosition;//touch/mouse position
 
