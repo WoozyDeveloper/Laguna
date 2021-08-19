@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public int oxDirection;//<0->left, >0->right
-    const float oyCameraPosition = 2, ozCameraPosition = 7;//distance camera -> car
+    const float oyCameraPosition = 6, ozCameraPosition = 8;//distance camera -> car
     const float xQuat = 0.1f, wQuat = 0.9f;
     private Camera cam;
     private CarMovement carMovement;
@@ -19,7 +19,7 @@ public class CameraScript : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(carMovement.transform.position.x, transform.position.y, carMovement.transform.position.z - 5);
+        transform.position = new Vector3(carMovement.transform.position.x, transform.position.y, carMovement.transform.position.z - ozCameraPosition);
         //transform.position = Vector3.MoveTowards(transform.position, newPosition, 20 * Time.deltaTime);
 
         

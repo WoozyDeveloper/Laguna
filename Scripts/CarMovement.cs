@@ -9,30 +9,49 @@ public class CarMovement : MonoBehaviour
     //right, left OX
     //up, down OY
     //front, back OZ
+    public Button acceleration;
+    private bool buttonPressed;
     public GameObject redArrow;
     private const float turnSpeed = 7f;
     CameraScript myCamera;
     private Rigidbody car;
-    private float carSpeed = 10;//  10 ->  50[0, 0,  -24]
+    public float carSpeed = 10, topSpeed;//  10 ->  50[0, 0,  -24]
     //. . . . . . . . . . . . .// 100 -> 220[0, 0, -171]
 
 
     void Start()
     {
         Application.targetFrameRate = 160;
+        buttonPressed = false;
         car = GetComponent<Rigidbody>();
         myCamera = FindObjectOfType<CameraScript>();
+
+        /*
+         * switch (gameobject.tag)
+         * {
+         * case 'lambo' : topSpeed = 220;
+         *                break;
+         * etc etc...
+         */
+        topSpeed = 80;
     }
 
     void Update()
     {
+        //rotation of the arrow from the accelerometer
         redArrow.transform.rotation = Quaternion.Slerp(redArrow.transform.rotation, Quaternion.Euler(0, 0, -carSpeed + 50), Time.deltaTime);
 
+        //velocity of the car
         car.velocity = new Vector3(0, 0, carSpeed);
-        Vector2 mousePos = Input.mousePosition;//touch/mouse position
+        
+        //touch/mouse position
+        Vector2 mousePos = Input.mousePosition;
+
+        if (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y < 190)
+            buttonPressed = false;
 
         //for right direction
-        if (Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2))
+        if (Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y > 190))
         {
             #region movement of the car to right
             if (car.velocity.z <= 0f)
@@ -42,7 +61,7 @@ public class CarMovement : MonoBehaviour
             #endregion
             #region tilt the car to the left
             
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 15), 10 * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 7), 2 * Time.deltaTime);
             
             #endregion
         }
@@ -57,7 +76,7 @@ public class CarMovement : MonoBehaviour
             #endregion
             #region tilt the car to the right
            
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, -15), 10 * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, -7), 2 * Time.deltaTime);
 
             #endregion
         }
@@ -65,22 +84,29 @@ public class CarMovement : MonoBehaviour
         else
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 20 * Time.deltaTime);
 
-        //boost / nitro / N20 / TOKYO DRIFT / ETC
-        if (Input.GetKey(KeyCode.LeftShift))
+        //boost / nitro / NOS / TOKYO DRIFT / ETC
+        if (Input.GetKey(KeyCode.LeftShift) || buttonPressed == true)//! ! ! TODO: add a button on the screen
         {
-            if (carSpeed <= 100f)//100 is the max speed
-                carSpeed += 0.5f;
+            if (carSpeed <= topSpeed)//100 is the max speed
+                carSpeed += 0.2f;//acceleration
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-20, 0, 0), 10 * Time.deltaTime);
         }
         else//hoo prrr easy easy
             if (carSpeed >= 15f)
             {
                 //TODO: LIGHTS!
-                carSpeed -= 0.3f;
+                carSpeed -= 0.3f;//deceleration
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(20, 0, 0), 10 * Time.deltaTime);
             }
+
     }
 
+    //boost for android phones
+    public void Boost()
+    {
+        buttonPressed = true;
+        acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y - 0.2f);
+    }
     public void Death()
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
