@@ -61,36 +61,45 @@ public class OtherCar : MonoBehaviour
             currentCar.velocity = new Vector3(0, 0, -speedMovement);
         #endregion
 
+        #region Switching lanes
         if (wannaChangeTheLane < 0 && Mathf.Abs(currentCar.transform.position.z - playerCar.transform.position.z) <= 20f)
         {
             ChangeLane();
-            Debug.Log("Caram cantam! Noi caram, dar si cantam!");
             // leftBlinker.stopBlinking();
             // rightBlinker.stopBlinking();
         }
+        #endregion
 
+        #region Respawn the car
         RespawnCar();
+        #endregion
     }
 
+    //aproximate the received value to a value from the array that
+    //holds the ox possible possitions of the cars
     private int Aproximate(float oxPosition)
     {
+        //initializations
+        float minimum_dif = float.MaxValue;
+        int good_index = -1;
         float[] diff = new float[4];
         int[] positions = new int[] { -6, -2, 2, 6 };
 
+        //calculate and store the differences in the diff array
         for (int index = 0; index < 4; index++)
             diff[index] = Mathf.Abs(oxPosition - positions[index]);
-
-        float minimum_dif = float.MaxValue;
-        int good_index = -1;
 
         //search the minimum difference and save the closest index in good_index
         for (int index = 0; index < 4; index++)
             if (diff[index] < minimum_dif)
             {
-                minimum_dif = diff[index];
-                good_index = index;
+                minimum_dif = diff[index];//update the minimum diff
+                good_index = index;//update the good index
             }
-        return positions[good_index];
+        return positions[good_index];//return the position from the index 'good_index'
+        /* Possible UPDATE . . .
+         * Respawn the destroyed car to a randomised position
+         */
     }
 
     private void RespawnCar()//cars are placed on OX at [-6, -2, 2, 6].
@@ -98,14 +107,15 @@ public class OtherCar : MonoBehaviour
         Vector3 oldPosition = currentCar.transform.position;
         if (playerCar.transform.position.z - currentCar.transform.position.z >= 5f)
         {
-            Instantiate(currentCar, new Vector3(Aproximate(oldPosition.x), oldPosition.y, oldPosition.z + spawnDistance), Quaternion.Euler(0f, 0f, 0f)); ;
-            Destroy(gameObject);
+            Instantiate(currentCar, new Vector3(Aproximate(oldPosition.x), oldPosition.y, oldPosition.z + spawnDistance), Quaternion.Euler(0f, 0f, 0f));
+            Destroy(gameObject);//destroy the car behind us
         }
     }
 
     private void ChangeLane()
     {
-        if (currentCar.transform.position.x >= 0f)//right side of the road
+        //right side of the road
+        if (currentCar.transform.position.x >= 0f)
         {
             if (currentCar.transform.position.x <= 6f && changedToRight == true)
             {
@@ -122,7 +132,8 @@ public class OtherCar : MonoBehaviour
                 this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);
             }
         }
-        else//left side of the road
+        //left side of the road
+        else
         {
             if (currentCar.transform.position.x <= -2f && changedToRight == true)
             {

@@ -6,13 +6,11 @@ public class Spawner : MonoBehaviour
 {
     private const int startingRoadsNum = 5;
     private CarMovement car;
-    private OtherCar otherCar;
-    public GameObject road,spawningCar;
+    public GameObject road;
 
     void Start()
     {
         car = FindObjectOfType<CarMovement>();
-        otherCar = FindObjectOfType<OtherCar>();
     }
 
     void Update()
