@@ -9,7 +9,6 @@ public class OtherCar : MonoBehaviour
     public BlinkerScript leftBlinker,rightBlinker;//for the blinker
 
     bool changedToLeft = false, changedToRight = false;//used in change lane to see if the car already switched a lane or not
-    public float[] oxPositions = new float[4];//main positions on ox for the cars
     public float spawnDistance;//spawning distance of the cars
     private float speedMovement;//movement of the cars with random value (see Start())
     private CarMovement playerCar;
@@ -43,7 +42,7 @@ public class OtherCar : MonoBehaviour
         #endregion
 
         //for P = 1/5
-        wannaChangeTheLane = -1;
+        wannaChangeTheLane = -1;// cu P = 1/6
     }
 
     void Update()
@@ -73,12 +72,33 @@ public class OtherCar : MonoBehaviour
         RespawnCar();
     }
 
-    private void RespawnCar()
+    private int Aproximate(float oxPosition)
+    {
+        float[] diff = new float[4];
+        int[] positions = new int[] { -6, -2, 2, 6 };
+
+        for (int index = 0; index < 4; index++)
+            diff[index] = Mathf.Abs(oxPosition - positions[index]);
+
+        float minimum_dif = float.MaxValue;
+        int good_index = -1;
+
+        //search the minimum difference and save the closest index in good_index
+        for (int index = 0; index < 4; index++)
+            if (diff[index] < minimum_dif)
+            {
+                minimum_dif = diff[index];
+                good_index = index;
+            }
+        return positions[good_index];
+    }
+
+    private void RespawnCar()//cars are placed on OX at [-6, -2, 2, 6].
     {
         Vector3 oldPosition = currentCar.transform.position;
         if (playerCar.transform.position.z - currentCar.transform.position.z >= 5f)
         {
-            Instantiate(currentCar, new Vector3(oldPosition.x, oldPosition.y, oldPosition.z + spawnDistance), Quaternion.Euler(0f,0f,0f));
+            Instantiate(currentCar, new Vector3(Aproximate(oldPosition.x), oldPosition.y, oldPosition.z + spawnDistance), Quaternion.Euler(0f, 0f, 0f)); ;
             Destroy(gameObject);
         }
     }
@@ -91,15 +111,15 @@ public class OtherCar : MonoBehaviour
             {
                 rightBlinker.changeState();
                 float oxPosition = 6f;
-                Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
-                transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
+                Vector3 newPosition = new Vector3(oxPosition, this.transform.position.y, this.transform.position.z);
+                this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);
             }
             else if (currentCar.transform.position.x >= 2f && changedToLeft == true)
             {
                 leftBlinker.changeState();
                 float oxPosition = 2f;
-                Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
-                transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
+                Vector3 newPosition = new Vector3(oxPosition, this.transform.position.y, transform.position.z);
+                this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);
             }
         }
         else//left side of the road
@@ -108,22 +128,23 @@ public class OtherCar : MonoBehaviour
             {
                 rightBlinker.changeState();
                 float oxPosition = -2f;
-                Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
-                transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
+                Vector3 newPosition = new Vector3(oxPosition, this.transform.position.y, this.transform.position.z);
+                this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);
             }
             else if (currentCar.transform.position.x >= -6f && changedToLeft == true)
             {
                 leftBlinker.changeState();
                 float oxPosition = -6f;
-                Vector3 newPosition = new Vector3(oxPosition, transform.position.y, transform.position.z);
-                transform.position = Vector3.MoveTowards(transform.position, newPosition, 2 * Time.deltaTime);
+                Vector3 newPosition = new Vector3(oxPosition, this.transform.position.y, this.transform.position.z);
+                this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);
             }
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag != "OtherCar")
+        if (collision.gameObject.tag != "OtherCar" && collision.gameObject.transform.position.z > this.transform.position.z)
         {
+            wannaChangeTheLane = -1;
             ChangeLane();
             
         }
