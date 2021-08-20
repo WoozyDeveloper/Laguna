@@ -93,14 +93,21 @@ public class CarMovement : MonoBehaviour
             if (carSpeed <= topSpeed)//100 is the max speed
                 carSpeed += 0.2f;//acceleration
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-20, 0, 0), 10 * Time.deltaTime);
+            if (acceleration.transform.localScale.y >= 0.8f)
+                acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y - 0.01f);
         }
         else//hoo prrr easy easy
+        {
+            if (acceleration.transform.localScale.y <= 1f)
+                acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y + 0.02f);
+
             if (carSpeed >= 15f)
             {
                 //TODO: LIGHTS!
                 carSpeed -= 0.3f;//deceleration
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(20, 0, 0), 10 * Time.deltaTime);
             }
+        }
         buttonPressed = false;
 
     }
