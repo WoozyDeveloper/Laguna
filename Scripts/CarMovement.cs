@@ -48,7 +48,10 @@ public class CarMovement : MonoBehaviour
         Vector2 mousePos = Input.mousePosition;
 
         if (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y < 190)
-            buttonPressed = false;
+        {
+            buttonPressed = true;
+
+        }
 
         //for right direction
         if (Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y > 190))
@@ -98,15 +101,10 @@ public class CarMovement : MonoBehaviour
                 carSpeed -= 0.3f;//deceleration
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(20, 0, 0), 10 * Time.deltaTime);
             }
+        buttonPressed = false;
 
     }
 
-    //boost for android phones
-    public void Boost()
-    {
-        buttonPressed = true;
-        acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y - 0.2f);
-    }
     public void Death()
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
