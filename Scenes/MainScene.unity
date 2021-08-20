@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 477370742}
   - component: {fileID: 477370741}
   m_Layer: 5
-  m_Name: background
+  m_Name: speedometer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 690804512}
   - component: {fileID: 690804511}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Screen UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
