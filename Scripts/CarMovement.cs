@@ -21,7 +21,7 @@ public class CarMovement : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 0.0f;//stop the game until you press start
+        //Time.timeScale = 0.0f;//stop the game until you press start
 
         Application.targetFrameRate = 160;//target frame rate
         buttonPressed = false;
