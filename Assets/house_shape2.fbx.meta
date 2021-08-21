@@ -3,7 +3,12 @@ guid: 5ff76506edb2f064eb8b9b53d125b5e3
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GARAJ
+    second: {fileID: 2100000, guid: b37ae34e58cd6434e8f26263d6b64faa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

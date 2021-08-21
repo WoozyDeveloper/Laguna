@@ -21,7 +21,9 @@ public class CarMovement : MonoBehaviour
 
     void Start()
     {
-        Application.targetFrameRate = 160;
+        Time.timeScale = 0.0f;//stop the game until you press start
+
+        Application.targetFrameRate = 160;//target frame rate
         buttonPressed = false;
         car = GetComponent<Rigidbody>();
         myCamera = FindObjectOfType<CameraScript>();
@@ -33,7 +35,7 @@ public class CarMovement : MonoBehaviour
          *                break;
          * etc etc...
          */
-        topSpeed = 80;
+        topSpeed = 80;//change it for every car
     }
 
     void Update()
@@ -50,11 +52,10 @@ public class CarMovement : MonoBehaviour
         if (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y < 190)
         {
             buttonPressed = true;
-
         }
 
-        //for right direction
-        if (Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y > 190))
+        //for RIGHT direction
+        if (Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && buttonPressed == false))
         {
             #region movement of the car to right
             if (car.velocity.z <= 0f)
@@ -68,8 +69,8 @@ public class CarMovement : MonoBehaviour
             
             #endregion
         }
-        //for left direction
-        else if (Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && mousePos.x < Screen.width / 2))
+        //for LEFT direction
+        if (Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && mousePos.x < Screen.width / 2))
         {
             #region movement of the car to left
             if (car.velocity.z >= 0f)
