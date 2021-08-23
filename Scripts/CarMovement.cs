@@ -55,8 +55,9 @@ public class CarMovement : MonoBehaviour
         }
 
         //for RIGHT direction
-        if (Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && buttonPressed == false))
+        if (Input.GetKey(KeyCode.D) || (mousePos.x > Screen.width / 2 && Input.GetMouseButton(0) && buttonPressed == false))
         {
+            Debug.Log("DREAPTA");
             #region movement of the car to right
             if (car.velocity.z <= 0f)
                 car.velocity = new Vector3(0f, 0f, car.velocity.z);
@@ -72,6 +73,7 @@ public class CarMovement : MonoBehaviour
         //for LEFT direction
         if (Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && mousePos.x < Screen.width / 2))
         {
+            Debug.Log("STANGA");
             #region movement of the car to left
             if (car.velocity.z >= 0f)
                 car.velocity = new Vector3(0f, 0f, car.velocity.z);
@@ -93,7 +95,7 @@ public class CarMovement : MonoBehaviour
         {
             if (carSpeed <= topSpeed)//100 is the max speed
                 carSpeed += 0.2f;//acceleration
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-20, 0, 0), 10 * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-10, 0, 0), 10 * Time.deltaTime);
             if (acceleration.transform.localScale.y >= 0.8f)
                 acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y - 0.01f);
         }
@@ -106,7 +108,7 @@ public class CarMovement : MonoBehaviour
             {
                 //TODO: LIGHTS!
                 carSpeed -= 0.3f;//deceleration
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(20, 0, 0), 10 * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(10, 0, 0), 10 * Time.deltaTime);
             }
         }
         buttonPressed = false;
