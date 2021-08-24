@@ -48,33 +48,36 @@ public class OtherCar : MonoBehaviour
     }
 
     void Update()
-    {
-        #region Car positioning
-        if (transform.position.x == 2f || transform.position.x == -6f)
-            changedToRight = true;
-        if (transform.position.x == 6f || transform.position.x == -2f)
-            changedToLeft = true;
-        #endregion
-
-        #region Movement of the car
-        if (currentCar.transform.position.x >= 0f)
-            currentCar.velocity = new Vector3(0, 0, speedMovement);
-        else
-            currentCar.velocity = new Vector3(0, 0, -speedMovement);
-        #endregion
-
-        #region Switching lanes
-        if (wannaChangeTheLane < 0 && Mathf.Abs(currentCar.transform.position.z - playerCar.transform.position.z) <= 20f)
+    {  
+        if(!playerCar.freezeGame)
         {
-            ChangeLane();
-            // leftBlinker.stopBlinking();
-            // rightBlinker.stopBlinking();
-        }
-        #endregion
+            #region Car positioning
+            if (transform.position.x == 2f || transform.position.x == -6f)
+                changedToRight = true;
+            if (transform.position.x == 6f || transform.position.x == -2f)
+                changedToLeft = true;
+            #endregion
 
-        #region Respawn the car
-        RespawnCar();
-        #endregion
+            #region Movement of the car
+            if (currentCar.transform.position.x >= 0f)
+                currentCar.velocity = new Vector3(0, 0, speedMovement);
+            else
+                currentCar.velocity = new Vector3(0, 0, -speedMovement);
+            #endregion
+
+            #region Switching lanes
+            if (wannaChangeTheLane < 0 && Mathf.Abs(currentCar.transform.position.z - playerCar.transform.position.z) <= 20f)
+            {
+                ChangeLane();
+                // leftBlinker.stopBlinking();
+                // rightBlinker.stopBlinking();
+            }
+            #endregion
+
+            #region Respawn the car
+            RespawnCar();
+            #endregion
+        }
     }
 
     //aproximate the received value to a value from the array that
