@@ -12,7 +12,8 @@ public class CarMovement : MonoBehaviour
     public Button acceleration;
     private bool buttonPressed;
     public GameObject redArrow;
-    private const float turnSpeed = 7f;
+    public float turnSpeed = 7f;
+    public float  currentTurnSpeed = 0f;
     CameraScript myCamera;
     private Rigidbody car;
     public float carSpeed = 10, topSpeed;//  10 ->  50[0, 0,  -24]
@@ -23,10 +24,10 @@ public class CarMovement : MonoBehaviour
     {
         //Time.timeScale = 0.0f;//stop the game until you press start
 
-        Application.targetFrameRate = 160;//target frame rate
+        Application.targetFrameRate = 160;
         buttonPressed = false;
-        car = GetComponent<Rigidbody>();
-        myCamera = FindObjectOfType<CameraScript>();
+        car = GetComponent<Rigidbody>();//current car
+        myCamera = FindObjectOfType<CameraScript>();//current camera
 
         /*
          * switch (gameobject.tag)
@@ -47,55 +48,67 @@ public class CarMovement : MonoBehaviour
         car.velocity = new Vector3(0, 0, carSpeed);
         
         //touch/mouse position
-        Vector2 mousePos = Input.mousePosition;
+        Vector2 mousePos = Input.mousePosition;//mouse pos(x,y)
 
-        if (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y < 190)
+        if (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y < 190)//if you press the acceleration for bottom right
         {
+            //TODO: add sound
             buttonPressed = true;
         }
 
         //for RIGHT direction
         if (Input.GetKey(KeyCode.D) || (mousePos.x > Screen.width / 2 && Input.GetMouseButton(0) && buttonPressed == false))
         {
-            Debug.Log("DREAPTA");
             #region movement of the car to right
-            if (car.velocity.z <= 0f)
-                car.velocity = new Vector3(0f, 0f, car.velocity.z);
-            car.AddForce(new Vector3(turnSpeed, 0f, 0f), ForceMode.Impulse);
-            myCamera.oxDirection = 4;
+            //if (car.velocity.z <= 0f)
+            //    car.velocity = new Vector3(0f, 0f, car.velocity.z);
+            if(currentTurnSpeed < 0)//reset the turn speed for another turn
+                currentTurnSpeed = 0;
+            if(currentTurnSpeed <= turnSpeed)//positive value for currentTurnSpeed
+                currentTurnSpeed += .5f;
+            car.AddForce(new Vector3(currentTurnSpeed, 0f, 0f), ForceMode.Impulse);
             #endregion
             #region tilt the car to the left
             
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 7), 2 * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 10, 7), Time.deltaTime);
             
             #endregion
         }
         //for LEFT direction
-        if (Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && mousePos.x < Screen.width / 2))
+        else if (Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && mousePos.x < Screen.width / 2))
         {
-            Debug.Log("STANGA");
             #region movement of the car to left
-            if (car.velocity.z >= 0f)
-                car.velocity = new Vector3(0f, 0f, car.velocity.z);
-            car.AddForce(new Vector3(-turnSpeed, 0f, 0f), ForceMode.Impulse);
-            myCamera.oxDirection = -4;
+            //if (car.velocity.z <= 0f)
+            //    car.velocity = new Vector3(0f, 0f, car.velocity.z);
+            if(currentTurnSpeed > 0)//reset the turn speed for another turn
+                currentTurnSpeed = 0;
+            if(currentTurnSpeed >= -turnSpeed)//negative value for currentTurnSpeed
+                currentTurnSpeed -= .5f;
+            car.AddForce(new Vector3(currentTurnSpeed, 0f, 0f), ForceMode.Impulse);
             #endregion
             #region tilt the car to the right
            
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, -7), 2 * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -10, -7), Time.deltaTime);
 
             #endregion
         }
         //when there's no action
         else
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 20 * Time.deltaTime);
+        {
+            float descendingTurn = car.velocity.x;
+            bool sign = descendingTurn > 0;
+            car.velocity = new Vector3(descendingTurn -= .5f, car.velocity.y, car.velocity.z);
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 5 * Time.deltaTime);
+            currentTurnSpeed = 0f;
+        }
 
         //boost / nitro / NOS / TOKYO DRIFT / ETC
         if (Input.GetKey(KeyCode.LeftShift) || buttonPressed == true)//! ! ! TODO: add a button on the screen
         {
             if (carSpeed <= topSpeed)//100 is the max speed
                 carSpeed += 0.2f;//acceleration
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-10, 0, 0), 10 * Time.deltaTime);
+            this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-10, this.transform.rotation.y, this.transform.rotation.z), 10 * Time.deltaTime);
             if (acceleration.transform.localScale.y >= 0.8f)
                 acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y - 0.01f);
         }
@@ -108,7 +121,7 @@ public class CarMovement : MonoBehaviour
             {
                 //TODO: LIGHTS!
                 carSpeed -= 0.3f;//deceleration
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(10, 0, 0), 10 * Time.deltaTime);
+               this. transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(10, 0, 0), 10 * Time.deltaTime);
             }
         }
         buttonPressed = false;

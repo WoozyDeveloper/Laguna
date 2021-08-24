@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    public int oxDirection;//<0->left, >0->right
     const float oyCameraPosition = 6, ozCameraPosition = 8;//distance camera -> car
     const float xQuat = 0.1f, wQuat = 0.9f;
     private Camera cam;
