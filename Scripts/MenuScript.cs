@@ -5,18 +5,29 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
-    [SerializeField] private Button start,options,exit;
-    private const float lastCameraPositionOZ = -29.82f;//last position of the camera on OZ after the intro animation
-    private bool clicked;//see if the user clicked on a button (any button)
+    public CarMovement game;
+    [SerializeField] private Button start,options,exit,garageButton;
+    private const float lastCameraPositionOZ = -29.82f,//last position of the camera on OZ after the intro animation
+                        garageCameraPositionOX = 7.07f;//last position of the camera on OX after you press the START button
+    private bool clicked,
+                buttonVisibility;//see if the user clicked on a button (any button)
 
     // Start is called before the first frame update
     private void Start()
     {
+        garageButton.gameObject.SetActive(false);//hide the GO button from the garage
         ShowButtons(false);//hide the buttons bcs of the intro animation
+        buttonVisibility = false;//buttons are not visible
         clicked = false;//set the default value
     }
 
     
+    //start the actual game after you press the 'GO' button
+    public void GarageGoButton()
+    {
+        
+    }
+
     //press on start button
     public void StartButton()
     {
@@ -25,6 +36,7 @@ public class MenuScript : MonoBehaviour
         
         //hide the buttons
         ShowButtons(false);
+        buttonVisibility = false;
         clicked = true;
         
     }
@@ -36,6 +48,7 @@ public class MenuScript : MonoBehaviour
 
         //hide the buttons
         ShowButtons(false);
+        buttonVisibility = false;
         clicked = true;
     }
 
@@ -45,15 +58,20 @@ public class MenuScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(transform.gameObject.transform.position.z == lastCameraPositionOZ)
+        if(transform.position.z == lastCameraPositionOZ && clicked == false)
         {
-            if(clicked == true)//if the user clicked a button exit the function
-                return;
-            if(start.gameObject.active == false)//check if the buttons are already displayed
-            {
-                Debug.Log("LE PUN");
-                ShowButtons(true);
-            }
+            if(buttonVisibility == true)//if the user clicked a button do nothing
+                Debug.Log("Mesaj strict secret ce nu trebuie vazut de nimeni!");//un mesaj strict secret ce nu trebuie vazut de nimeni
+            else
+                if(start.gameObject.activeSelf == false)//check if the buttons are already displayed
+                {
+                    ShowButtons(true);
+                    buttonVisibility = true;
+                }
+        }
+        else if(transform.position.x == garageCameraPositionOX)//the position of the camera on the garage
+        {
+            garageButton.gameObject.SetActive(true);//activate the GO button to start the game
         }
     }
 
