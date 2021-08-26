@@ -15,7 +15,6 @@ public class CarMovement : MonoBehaviour
     public GameObject redArrow, speedometer;
     public float turnSpeed = 7f;
     public float  currentTurnSpeed = 0f;
-    CameraScript myCamera;
     private Rigidbody car;
     public float carSpeed = 10, topSpeed;//  10 ->  50[0, 0,  -24]
     //. . . . . . . . . . . . .// 100 -> 220[0, 0, -171]
@@ -36,7 +35,6 @@ public class CarMovement : MonoBehaviour
         buttonPressed = false;//the acceleration
 
         car = GetComponent<Rigidbody>();//current car
-        myCamera = FindObjectOfType<CameraScript>();//current camera
 
         /*
          * switch (gameobject.tag)

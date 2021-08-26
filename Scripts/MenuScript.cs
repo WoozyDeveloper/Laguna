@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
-    public CarMovement game;
+    private CarMovement game;
     [SerializeField] private Button start,options,exit,garageButton;
     private const float lastCameraPositionOZ = -29.82f,//last position of the camera on OZ after the intro animation
                         garageCameraPositionOX = 7.07f;//last position of the camera on OX after you press the START button
@@ -15,17 +15,29 @@ public class MenuScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        game = FindObjectOfType<CarMovement>();
+
         garageButton.gameObject.SetActive(false);//hide the GO button from the garage
         ShowButtons(false);//hide the buttons bcs of the intro animation
         buttonVisibility = false;//buttons are not visible
         clicked = false;//set the default value
     }
 
-    
+    //back from the garage to the main menu
+    public void BackFromGarage()
+    {
+        garageButton.gameObject.SetActive(false);
+        clicked = false;
+        buttonVisibility = true;
+        ShowButtons(true);
+    }
+
+
     //start the actual game after you press the 'GO' button
     public void GarageGoButton()
     {
-        
+        garageButton.gameObject.SetActive(false);//hide the button
+        game.freezeGame = false;//start the game
     }
 
     //press on start button
@@ -58,6 +70,8 @@ public class MenuScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(game.freezeGame == false)//exit this function if the user left the menu
+            return;
         if(transform.position.z == lastCameraPositionOZ && clicked == false)
         {
             if(buttonVisibility == true)//if the user clicked a button do nothing
