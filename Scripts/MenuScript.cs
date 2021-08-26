@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MenuScript : MonoBehaviour
 {
     private CarMovement game;
-    [SerializeField] private Button start,options,exit,garageButton;
+    [SerializeField] private Button start,options,exit,garageButton,backFromGarage;
     private const float lastCameraPositionOZ = -29.82f,//last position of the camera on OZ after the intro animation
                         garageCameraPositionOX = 7.07f;//last position of the camera on OX after you press the START button
     private bool clicked,
@@ -18,6 +18,8 @@ public class MenuScript : MonoBehaviour
         game = FindObjectOfType<CarMovement>();
 
         garageButton.gameObject.SetActive(false);//hide the GO button from the garage
+        backFromGarage.gameObject.SetActive(false);
+
         ShowButtons(false);//hide the buttons bcs of the intro animation
         buttonVisibility = false;//buttons are not visible
         clicked = false;//set the default value
@@ -26,7 +28,10 @@ public class MenuScript : MonoBehaviour
     //back from the garage to the main menu
     public void BackFromGarage()
     {
+        Debug.Log("INTRA");
         garageButton.gameObject.SetActive(false);
+        //backFromGarage.gameObject.SetActive(false);
+
         clicked = false;
         buttonVisibility = true;
         ShowButtons(true);
@@ -37,6 +42,8 @@ public class MenuScript : MonoBehaviour
     public void GarageGoButton()
     {
         garageButton.gameObject.SetActive(false);//hide the button
+        backFromGarage.gameObject.SetActive(false);
+
         game.freezeGame = false;//start the game
         this.enabled = false;//disable this script
     }
@@ -85,6 +92,7 @@ public class MenuScript : MonoBehaviour
         else if(transform.position.x == garageCameraPositionOX)//the position of the camera on the garage
         {
             garageButton.gameObject.SetActive(true);//activate the GO button to start the game
+            backFromGarage.gameObject.SetActive(true);
         }
     }
 
