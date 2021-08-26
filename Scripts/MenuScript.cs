@@ -29,12 +29,8 @@ public class MenuScript : MonoBehaviour
     public void BackFromGarage()
     {
         Debug.Log("INTRA");
-        garageButton.gameObject.SetActive(false);
-        //backFromGarage.gameObject.SetActive(false);
-
-        clicked = false;
-        buttonVisibility = true;
-        ShowButtons(true);
+    
+        Start();
     }
 
 
@@ -82,9 +78,10 @@ public class MenuScript : MonoBehaviour
         {
             if(buttonVisibility == true)//if the user clicked a button do nothing
                 Debug.Log("Mesaj strict secret ce nu trebuie vazut de nimeni!");//un mesaj strict secret ce nu trebuie vazut de nimeni
-            else
+            else   
                 if(start.gameObject.activeSelf == false)//check if the buttons are already displayed
                 {
+                    Debug.Log("CE DOAMNE FRATE MAI AI ACUM");
                     ShowButtons(true);
                     buttonVisibility = true;
                 }
@@ -93,6 +90,11 @@ public class MenuScript : MonoBehaviour
         {
             garageButton.gameObject.SetActive(true);//activate the GO button to start the game
             backFromGarage.gameObject.SetActive(true);
+        }
+        else if(transform.position.x !=garageCameraPositionOX)
+        {
+            garageButton.gameObject.SetActive(false);//disable the go button if you press back
+            backFromGarage.gameObject.SetActive(false);
         }
     }
 
