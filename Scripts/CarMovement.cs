@@ -116,7 +116,7 @@ public class CarMovement : MonoBehaviour
             {
                 float descendingTurn = car.velocity.x;
                 bool sign = descendingTurn > 0;
-                car.velocity = new Vector3(descendingTurn -= .5f, car.velocity.y, car.velocity.z);
+                car.velocity = new Vector3(0, 0, carSpeed);
 
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 5 * Time.deltaTime);
                 currentTurnSpeed = 0f;
@@ -140,7 +140,7 @@ public class CarMovement : MonoBehaviour
                 {
                     //TODO: LIGHTS!
                     carSpeed -= 0.3f;//deceleration
-                this. transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(10, 0, 0), 10 * Time.deltaTime);
+                this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(10, 0, 0), 10 * Time.deltaTime);
                 }
             }
             buttonPressed = false;
