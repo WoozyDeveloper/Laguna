@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    const float oyCameraPosition = 6, ozCameraPosition = 8;//distance camera -> car
+    const float oyCameraPosition = 2, ozCameraPosition = 8;//distance camera -> car
     const float xQuat = 0.1f, wQuat = 0.9f;
-    public CarMovement carMovement;
+    private Camera cam;
+    private CarMovement carMovement;
 
     void Start()
     {
+        cam = GetComponent<Camera>();
         carMovement = FindObjectOfType<CarMovement>();
-        this.transform.rotation = new Quaternion(xQuat, 0, 0, wQuat);
+        cam.transform.rotation = new Quaternion(xQuat, 0, 0, wQuat);
     }
 
     void Update()
     {
         if(carMovement.freezeGame == false)
         {
-            //Debug.LogError(carMovement.transform.position);
-            this.transform.position = new Vector3(carMovement.transform.position.x, transform.position.y, carMovement.transform.position.z - ozCameraPosition);
+            transform.position = new Vector3(carMovement.transform.position.x, carMovement.transform.position.y + oyCameraPosition, carMovement.transform.position.z - ozCameraPosition);
         }
     }
 }

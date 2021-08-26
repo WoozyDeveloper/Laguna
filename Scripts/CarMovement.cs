@@ -50,7 +50,16 @@ public class CarMovement : MonoBehaviour
     {
         if(!freezeGame)
         {
-            
+            if(!acceleration.IsActive())
+            {
+                acceleration.gameObject.SetActive(true);
+                redArrow.gameObject.SetActive(true);
+                speedometer.gameObject.SetActive(true);
+            }
+
+            if(FindObjectOfType<CameraScript>().transform.rotation.y == 0f)
+                FindObjectOfType<CameraScript>().GetComponent<Animator>().enabled = false;
+
             //rotation of the arrow from the accelerometer
             redArrow.transform.rotation = Quaternion.Slerp(redArrow.transform.rotation, Quaternion.Euler(0, 0, -carSpeed + 50), Time.deltaTime);
 
