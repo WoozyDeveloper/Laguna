@@ -38,6 +38,7 @@ public class MenuScript : MonoBehaviour
     {
         garageButton.gameObject.SetActive(false);//hide the button
         game.freezeGame = false;//start the game
+        this.enabled = false;//disable this script
     }
 
     //press on start button
@@ -70,8 +71,6 @@ public class MenuScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(game.freezeGame == false)//exit this function if the user left the menu
-            return;
         if(transform.position.z == lastCameraPositionOZ && clicked == false)
         {
             if(buttonVisibility == true)//if the user clicked a button do nothing

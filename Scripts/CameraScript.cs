@@ -18,11 +18,8 @@ public class CameraScript : MonoBehaviour
     {
         if(carMovement.freezeGame == false)
         {
-            Debug.LogError("Intra");
+            //Debug.LogError(carMovement.transform.position);
             this.transform.position = new Vector3(carMovement.transform.position.x, transform.position.y, carMovement.transform.position.z - ozCameraPosition);
         }
-        //transform.position = Vector3.MoveTowards(transform.position, newPosition, 20 * Time.deltaTime);
-
-        
     }
 }
