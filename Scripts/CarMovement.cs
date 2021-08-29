@@ -22,6 +22,7 @@ public class CarMovement : MonoBehaviour
 
     void Start()
     {
+
         //Time.timeScale = 0.0f;//stop the game
 
         //hide the UI for the game
@@ -144,7 +145,6 @@ public class CarMovement : MonoBehaviour
                 }
             }
             buttonPressed = false;
-                
         }
 
     }
