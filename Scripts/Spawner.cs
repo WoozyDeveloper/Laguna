@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    private const int startingRoadsNum = 7;
+    private const int startingRoadsNum = 6;
     private CarMovement car;
     public GameObject road;
 
