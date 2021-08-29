@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &665286644466955135
 Transform:
@@ -99,7 +99,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &186342709158510754
 Transform:
@@ -195,7 +195,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &268395787765927771
 Transform:
@@ -278,7 +278,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5552257216710860032
 Transform:
@@ -374,7 +374,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &305156276287275669
 Transform:
@@ -457,7 +457,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &1222489353554407841
 Transform:
@@ -553,7 +553,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &1923874383356942753
 Transform:
@@ -635,7 +635,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &6213517025752083451
 Transform:
@@ -718,7 +718,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &1407206642792323892
 Transform:
@@ -801,7 +801,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &2011857033979886755
 Transform:
@@ -898,7 +898,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &2059896518285559909
 Transform:
@@ -994,7 +994,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &1612497614703545155
 Transform:
@@ -1074,7 +1074,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7463355875402765322
 Transform:
@@ -1107,7 +1107,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &2202730106962418403
 Transform:
@@ -1203,7 +1203,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8438391031801025124
 Transform:
@@ -1287,7 +1287,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3105832211240320256
 Transform:
@@ -1369,7 +1369,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3057168545154119728
 Transform:
@@ -1452,7 +1452,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &2519308887693561525
 Transform:
@@ -1549,7 +1549,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &2714762455100738002
 Transform:
@@ -1646,7 +1646,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &2784206771285080006
 Transform:
@@ -1743,7 +1743,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3027695421952287836
 Transform:
@@ -1840,7 +1840,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3075951002341069339
 Transform:
@@ -1937,7 +1937,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3450715385277803547
 Transform:
@@ -2034,7 +2034,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3467541431178461747
 Transform:
@@ -2131,7 +2131,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &4076339362676448122
 Transform:
@@ -2227,7 +2227,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3974923642448555227
 Transform:
@@ -2310,7 +2310,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &4410278999827390486
 Transform:
@@ -2407,7 +2407,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &1242526804964614135
 Transform:
@@ -2503,7 +2503,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5335317630803638957
 Transform:
@@ -2586,7 +2586,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &4780821848639745373
 Transform:
@@ -2682,7 +2682,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5499622800551943779
 Transform:
@@ -2765,7 +2765,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5123648244454458698
 Transform:
@@ -2862,7 +2862,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &526114691103000417
 Transform:
@@ -2959,7 +2959,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5323427566365670660
 Transform:
@@ -3056,7 +3056,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8474583884123858912
 Transform:
@@ -3152,7 +3152,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5172200195195032491
 Transform:
@@ -3235,7 +3235,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5540486973648933914
 Transform:
@@ -3332,7 +3332,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5585400985036704762
 Transform:
@@ -3429,7 +3429,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5797981266669154835
 Transform:
@@ -3526,7 +3526,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5884402190389679229
 Transform:
@@ -3623,7 +3623,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &6004275126272799259
 Transform:
@@ -3720,7 +3720,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &6046333860897330535
 Transform:
@@ -3817,7 +3817,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &6092038542190734276
 Transform:
@@ -3913,7 +3913,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &6037329981081479317
 Transform:
@@ -3995,7 +3995,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &6042064494731293390
 Transform:
@@ -4075,7 +4075,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8088469439991047110
 Transform:
@@ -4112,7 +4112,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &9165132565337324125
 Transform:
@@ -4196,7 +4196,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &2447727446127570598
 Transform:
@@ -4429,7 +4429,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7026228140713449451
 Transform:
@@ -4526,7 +4526,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7052740379155568073
 Transform:
@@ -4622,7 +4622,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7615326233888541459
 Transform:
@@ -4702,7 +4702,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &3392856365854118314
 Transform:
@@ -4732,7 +4732,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &1305573839388183686
 Transform:
@@ -4765,7 +4765,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7271607954379271013
 Transform:
@@ -4862,7 +4862,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7358008456518583584
 Transform:
@@ -4959,7 +4959,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7370672061024430548
 Transform:
@@ -5055,7 +5055,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7894331633048273684
 Transform:
@@ -5137,7 +5137,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7813391002836822665
 Transform:
@@ -5220,7 +5220,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7750756062785940953
 Transform:
@@ -5314,7 +5314,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &6985984272475953182
 Transform:
@@ -5349,7 +5349,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8017275830162331586
 Transform:
@@ -5446,7 +5446,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8075657389600745021
 Transform:
@@ -5543,7 +5543,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8090629833425041856
 Transform:
@@ -5637,7 +5637,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &121224247915178154
 Transform:
@@ -5669,7 +5669,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8936025962267606793
 Transform:
@@ -5751,7 +5751,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8607421308252568292
 Transform:
@@ -5834,7 +5834,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &4335873590365979898
 Transform:
@@ -5931,7 +5931,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &9083515952627657889
 Transform:
@@ -6028,7 +6028,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &8780937787675111402
 Transform:
@@ -6119,6 +6119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Road_17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267836400230960523, guid: e8a0a2afcb3e2914a83f377c225cfc85,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5267836400230994347, guid: e8a0a2afcb3e2914a83f377c225cfc85,
         type: 3}
@@ -6280,6 +6285,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: felinar (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540110756344609874, guid: 7c8237a0c83f58244a76cef03c4aa23b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8237a0c83f58244a76cef03c4aa23b, type: 3}
 --- !u!4 &4958273085402023926 stripped
@@ -6370,6 +6380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_02 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
 --- !u!4 &5016551612110490800 stripped
@@ -6389,6 +6404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Luke_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435850674697938011, guid: 99baf46d4543aa742be253a545467707,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7435850674698434683, guid: 99baf46d4543aa742be253a545467707,
         type: 3}
@@ -6550,6 +6570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
 --- !u!4 &4806607133382602101 stripped
@@ -6640,6 +6665,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_02 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
 --- !u!4 &4654668516417069109 stripped
@@ -6659,6 +6689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HousePart_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975875961579412361, guid: 44d67e072df4a124f91f003f34c10b41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6975875961579833257, guid: 44d67e072df4a124f91f003f34c10b41,
         type: 3}
@@ -6810,6 +6845,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
 --- !u!4 &9072907723680554438 stripped
@@ -6900,6 +6940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
 --- !u!4 &6424483900795916744 stripped
@@ -6984,6 +7029,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Factory_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781658260277640750, guid: 8f8b8c761c14e974a89118c516e19d5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f8b8c761c14e974a89118c516e19d5c, type: 3}
@@ -7075,6 +7125,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: felinar (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540110756344609874, guid: 7c8237a0c83f58244a76cef03c4aa23b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8237a0c83f58244a76cef03c4aa23b, type: 3}
 --- !u!4 &6451635977624516232 stripped
@@ -7164,6 +7219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: felinar (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540110756344609874, guid: 7c8237a0c83f58244a76cef03c4aa23b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8237a0c83f58244a76cef03c4aa23b, type: 3}
@@ -7255,6 +7315,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: House_15
       objectReference: {fileID: 0}
+    - target: {fileID: 1566877731761671174, guid: 85056a1af145b9646a00dc3ae4c9f2bf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85056a1af145b9646a00dc3ae4c9f2bf, type: 3}
 --- !u!4 &3847416993284621181 stripped
@@ -7339,6 +7404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Road_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771791864824318232, guid: 8813bf92944f1614db4cffc593494f45,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8813bf92944f1614db4cffc593494f45, type: 3}
@@ -7430,6 +7500,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
 --- !u!4 &7860022892118898967 stripped
@@ -7449,6 +7524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoadSign_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903351923960231162, guid: dd06f9b6f70df7541ae1880694a0c48e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4903351923960654042, guid: dd06f9b6f70df7541ae1880694a0c48e,
         type: 3}
@@ -7600,6 +7680,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4512043694561746817, guid: d1244c59ce6bbfa45ac9f685c02a08ab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1244c59ce6bbfa45ac9f685c02a08ab, type: 3}
 --- !u!4 &1917031383828947843 stripped
@@ -7684,6 +7769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
@@ -7770,6 +7860,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HousePart_02
       objectReference: {fileID: 0}
+    - target: {fileID: 2505752510273031635, guid: 2d5a0c7736ee2af4abe16aecf99127a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d5a0c7736ee2af4abe16aecf99127a6, type: 3}
 --- !u!4 &543454357114011053 stripped
@@ -7855,6 +7950,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 90463647716230620, guid: cc34783c974a00e41a7160adeca4e983,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc34783c974a00e41a7160adeca4e983, type: 3}
 --- !u!4 &2925449789016691303 stripped
@@ -7874,6 +7974,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House_18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803120681043082653, guid: d0feaeca9f5e737438051c23b5b39a58,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5803120681043108285, guid: d0feaeca9f5e737438051c23b5b39a58,
         type: 3}
@@ -8030,6 +8135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
 --- !u!4 &4862513647771917506 stripped
@@ -8049,6 +8159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546260138026176432, guid: 47a9d24e29bdb6346b7b95728f2f7370,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2546260138026472336, guid: 47a9d24e29bdb6346b7b95728f2f7370,
         type: 3}
@@ -8205,6 +8320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadSign_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5618179732687138304, guid: 5364b13ae82a94f40b6d11d03f3ade32,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5364b13ae82a94f40b6d11d03f3ade32, type: 3}
 --- !u!4 &8980589199237468666 stripped
@@ -8289,6 +8409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
@@ -8375,6 +8500,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
 --- !u!4 &6609332707961683217 stripped
@@ -8459,6 +8589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
@@ -8550,6 +8685,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: felinar
       objectReference: {fileID: 0}
+    - target: {fileID: 5540110756344609874, guid: 7c8237a0c83f58244a76cef03c4aa23b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8237a0c83f58244a76cef03c4aa23b, type: 3}
 --- !u!4 &8270565678996622288 stripped
@@ -8569,6 +8709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flower_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546260138026176432, guid: 47a9d24e29bdb6346b7b95728f2f7370,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2546260138026472336, guid: 47a9d24e29bdb6346b7b95728f2f7370,
         type: 3}
@@ -8654,6 +8799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoadSign_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081646217778732775, guid: 691ce7ae9f577fb4fbce1517dcfc952f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9081646217779151559, guid: 691ce7ae9f577fb4fbce1517dcfc952f,
         type: 3}
@@ -8810,6 +8960,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
 --- !u!4 &6023702732596500296 stripped
@@ -8895,6 +9050,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
 --- !u!4 &6000928376688085468 stripped
@@ -8914,6 +9074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoadSign_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903351923960231162, guid: dd06f9b6f70df7541ae1880694a0c48e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4903351923960654042, guid: dd06f9b6f70df7541ae1880694a0c48e,
         type: 3}
@@ -8999,6 +9164,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8158117907864760633, guid: 2de9d03b21cb3d8409f09b5f7b888d73,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8158117907865251097, guid: 2de9d03b21cb3d8409f09b5f7b888d73,
         type: 3}
@@ -9150,6 +9320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Factory_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5781658260277640750, guid: 8f8b8c761c14e974a89118c516e19d5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f8b8c761c14e974a89118c516e19d5c, type: 3}
 --- !u!4 &7872416614144518899 stripped
@@ -9240,6 +9415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: felinar (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540110756344609874, guid: 7c8237a0c83f58244a76cef03c4aa23b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8237a0c83f58244a76cef03c4aa23b, type: 3}
 --- !u!4 &427471183467911390 stripped
@@ -9324,6 +9504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrassPlane_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928373855990304340, guid: aa039a7689f07fb429aee6c3da6619c6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa039a7689f07fb429aee6c3da6619c6, type: 3}
@@ -9415,6 +9600,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HousePart_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2505752510273031635, guid: 2d5a0c7736ee2af4abe16aecf99127a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d5a0c7736ee2af4abe16aecf99127a6, type: 3}
 --- !u!4 &7268861348083868736 stripped
@@ -9505,6 +9695,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_02 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
 --- !u!4 &459502236998100089 stripped
@@ -9520,10 +9715,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2447727446127570598}
     m_Modifications:
+    - target: {fileID: 528787485520700666, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 847328587127560307, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 878861058822391127, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993469457239708023, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2327942933433126609, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
         type: 3}
       propertyPath: m_Name
       value: Car_14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327942933433126609, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662702375656233387, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963823985225857649, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079338847111232649, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9130877746636292220, guid: 882e9c7eb5a1df145ad9fb0c2eae8598,
         type: 3}
@@ -9685,6 +9920,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
 --- !u!4 &2229056630631771012 stripped
@@ -9774,6 +10014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
@@ -9865,6 +10110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: felinar (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540110756344609874, guid: 7c8237a0c83f58244a76cef03c4aa23b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8237a0c83f58244a76cef03c4aa23b, type: 3}
 --- !u!4 &2777021779066418606 stripped
@@ -9884,6 +10134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 177650849926606893, guid: 706f50f31d9f0d740a7664f87af11fee,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 177650849926638605, guid: 706f50f31d9f0d740a7664f87af11fee,
         type: 3}
@@ -9969,6 +10224,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrassPart_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 710354548013360491, guid: 5671b3a8c61535f4284a9d712a266b1e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 710354548013463883, guid: 5671b3a8c61535f4284a9d712a266b1e,
         type: 3}
@@ -10130,6 +10390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG
       objectReference: {fileID: 0}
+    - target: {fileID: 8084770301097599959, guid: 7b0ad3b052b16bb438ed0ba0f5e39e17,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b0ad3b052b16bb438ed0ba0f5e39e17, type: 3}
 --- !u!4 &1683218617661608712 stripped
@@ -10220,6 +10485,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_02 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
 --- !u!4 &2850201492948007261 stripped
@@ -10305,6 +10575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4512043694561746817, guid: d1244c59ce6bbfa45ac9f685c02a08ab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1244c59ce6bbfa45ac9f685c02a08ab, type: 3}
 --- !u!4 &6330494658718623876 stripped
@@ -10389,6 +10664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrassPlane_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928373855990304340, guid: aa039a7689f07fb429aee6c3da6619c6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa039a7689f07fb429aee6c3da6619c6, type: 3}
@@ -10480,6 +10760,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: felinar (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540110756344609874, guid: 7c8237a0c83f58244a76cef03c4aa23b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8237a0c83f58244a76cef03c4aa23b, type: 3}
 --- !u!4 &3022841724321876683 stripped
@@ -10564,6 +10849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
@@ -10655,6 +10945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Factory_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4620516946668821221, guid: d8b557f14e5f13e46842083850e488c5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8b557f14e5f13e46842083850e488c5, type: 3}
 --- !u!4 &3552790556700752398 stripped
@@ -10674,6 +10969,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Luke_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435850674697938011, guid: 99baf46d4543aa742be253a545467707,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7435850674698434683, guid: 99baf46d4543aa742be253a545467707,
         type: 3}
@@ -10835,6 +11135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HousePart_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2505752510273031635, guid: 2d5a0c7736ee2af4abe16aecf99127a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d5a0c7736ee2af4abe16aecf99127a6, type: 3}
 --- !u!4 &6016177226735632357 stripped
@@ -10920,6 +11225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
 --- !u!4 &1879275975461079285 stripped
@@ -10939,6 +11249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 177650849926606893, guid: 706f50f31d9f0d740a7664f87af11fee,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 177650849926638605, guid: 706f50f31d9f0d740a7664f87af11fee,
         type: 3}
@@ -11090,6 +11405,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
 --- !u!4 &1237752866560219618 stripped
@@ -11109,6 +11429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078899280485963651, guid: efd9b08c22b97cd40b047f6ce1167112,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7078899280486189987, guid: efd9b08c22b97cd40b047f6ce1167112,
         type: 3}
@@ -11199,6 +11524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: without_stripe
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005374382676831942, guid: cc84f0f4d4e45f24ab8ae06a8669c71d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9005374382676996838, guid: cc84f0f4d4e45f24ab8ae06a8669c71d,
         type: 3}
@@ -11360,6 +11690,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bank
       objectReference: {fileID: 0}
+    - target: {fileID: 6451892246135185413, guid: 454c9f298b81f834b83d6242632521c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 454c9f298b81f834b83d6242632521c7, type: 3}
 --- !u!4 &2851019257276327833 stripped
@@ -11379,6 +11714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HousePart_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885900687031135899, guid: e43af7a8eb0e2264ea4e45ec944b223c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2885900687031169723, guid: e43af7a8eb0e2264ea4e45ec944b223c,
         type: 3}
@@ -11530,6 +11870,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7534005007231115728, guid: 3b6d68c439645414d83e3f005156b1b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6d68c439645414d83e3f005156b1b8, type: 3}
 --- !u!4 &1613191041656018561 stripped
@@ -11619,6 +11964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708141380687099528, guid: 52757b6367ec83841b79426726a303a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52757b6367ec83841b79426726a303a6, type: 3}
