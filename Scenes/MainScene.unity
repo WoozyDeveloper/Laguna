@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 9fc0d4010bbf28b4594072e72b8655ab
+  m_OcclusionCullingData: {fileID: 36300000, guid: 01cd1a1d25cb3174c9cd223652aaa295,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -2556,7 +2557,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 59.7
   orthographic: 0
   orthographic size: 5
@@ -4926,9 +4927,19 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 139255538151029396, guid: 761e746c8ab95cf4c97d139b20531edb,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 570383730245738133, guid: 761e746c8ab95cf4c97d139b20531edb,
         type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015628034297948664, guid: 761e746c8ab95cf4c97d139b20531edb,
+        type: 3}
+      propertyPath: m_Materials.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2203849296542453551, guid: 761e746c8ab95cf4c97d139b20531edb,
@@ -4991,6 +5002,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811906017923375661, guid: 761e746c8ab95cf4c97d139b20531edb,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431769178885663077, guid: 761e746c8ab95cf4c97d139b20531edb,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4052847481488382695, guid: 761e746c8ab95cf4c97d139b20531edb,
         type: 3}
       propertyPath: m_Constraints
@@ -5005,6 +5026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160452088017011924, guid: 761e746c8ab95cf4c97d139b20531edb,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7022642329431534906, guid: 761e746c8ab95cf4c97d139b20531edb,
         type: 3}
@@ -5035,6 +5061,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875684043659237380, guid: 761e746c8ab95cf4c97d139b20531edb,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006020893269048790, guid: 761e746c8ab95cf4c97d139b20531edb,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4842538261787630733, guid: 761e746c8ab95cf4c97d139b20531edb, type: 3}
