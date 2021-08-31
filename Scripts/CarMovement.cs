@@ -70,7 +70,7 @@ public class CarMovement : MonoBehaviour
             //touch/mouse position
             Vector2 mousePos = Input.mousePosition;//mouse pos(x,y)
 
-            if (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y < 190)//if you press the acceleration for bottom right
+            if (Input.GetMouseButton(0) && mousePos.x > Screen.width / 2 && mousePos.y < Screen.height / 10)//if you press the acceleration for bottom right
             {
                 //TODO: add sound
                 buttonPressed = true;

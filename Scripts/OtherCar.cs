@@ -122,7 +122,7 @@ public class OtherCar : MonoBehaviour
         if (playerCar.transform.position.z - currentCar.transform.position.z >= 5f)
         {
             Instantiate(currentCar, new Vector3(Aproximate(oldPosition.x), oldPosition.y, oldPosition.z + spawnDistance), Quaternion.Euler(0f, 0f, 0f));
-            Destroy(this);//destroy the car behind us
+            Destroy(gameObject);//destroy the car behind us
             
         }
     }
