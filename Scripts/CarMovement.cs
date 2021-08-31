@@ -13,7 +13,7 @@ public class CarMovement : MonoBehaviour
     private bool buttonPressed;
     public bool freezeGame;
     public GameObject redArrow, speedometer;
-    public float turnSpeed = 7f;
+    public float turnSpeed = 10f;
     public float  currentTurnSpeed = 0f;
     private Rigidbody car;
     public float carSpeed = 10, topSpeed;//  10 ->  50[0, 0,  -24]
@@ -80,17 +80,14 @@ public class CarMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.D) || (mousePos.x > Screen.width / 2 && Input.GetMouseButton(0) && buttonPressed == false))
             {
                 #region movement of the car to right
-                //if (car.velocity.z <= 0f)
-                //    car.velocity = new Vector3(0f, 0f, car.velocity.z);
-                if(currentTurnSpeed < 0)//reset the turn speed for another turn
-                    currentTurnSpeed = 0;
-                if(currentTurnSpeed <= turnSpeed)//positive value for currentTurnSpeed
-                    currentTurnSpeed += .5f;
-                car.AddForce(new Vector3(currentTurnSpeed, 0f, 0f), ForceMode.Impulse);
+
+                const float step = 0.08f;
+                car.AddForce(new Vector3(currentTurnSpeed += step, 0f, 0f), ForceMode.Impulse);
+
                 #endregion
                 #region tilt the car to the left
                 
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 10, 7), Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 15, 10), 5 * Time.deltaTime);
                 
                 #endregion
             }
@@ -98,17 +95,14 @@ public class CarMovement : MonoBehaviour
             else if (Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && mousePos.x < Screen.width / 2))
             {
                 #region movement of the car to left
-                //if (car.velocity.z <= 0f)
-                //    car.velocity = new Vector3(0f, 0f, car.velocity.z);
-                if(currentTurnSpeed > 0)//reset the turn speed for another turn
-                    currentTurnSpeed = 0;
-                if(currentTurnSpeed >= -turnSpeed)//negative value for currentTurnSpeed
-                    currentTurnSpeed -= .5f;
-                car.AddForce(new Vector3(currentTurnSpeed, 0f, 0f), ForceMode.Impulse);
+
+                const float step = 0.08f;
+                car.AddForce(new Vector3(-(currentTurnSpeed += step), 0f, 0f), ForceMode.Impulse);
+
                 #endregion
                 #region tilt the car to the right
             
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -10, -7), Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -15, -10), 5 * Time.deltaTime);
 
                 #endregion
             }
@@ -119,7 +113,7 @@ public class CarMovement : MonoBehaviour
                 bool sign = descendingTurn > 0;
                 car.velocity = new Vector3(0, 0, carSpeed);
 
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 5 * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 8 * Time.deltaTime);
                 currentTurnSpeed = 0f;
             }
 
@@ -141,7 +135,7 @@ public class CarMovement : MonoBehaviour
                 {
                     //TODO: LIGHTS!
                     carSpeed -= 0.3f;//deceleration
-                this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(10, 0, 0), 10 * Time.deltaTime);
+                    this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(10, 0, 0), 10 * Time.deltaTime);
                 }
             }
             buttonPressed = false;
