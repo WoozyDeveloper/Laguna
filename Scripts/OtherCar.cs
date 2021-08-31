@@ -14,12 +14,19 @@ public class OtherCar : MonoBehaviour
     private CarMovement playerCar;
     private Rigidbody currentCar;
     private int wannaChangeTheLane, probabilityOfChangingLane;
+    private const int numberOfCars = 15;
+    public GameObject[] cars = new GameObject[numberOfCars];
 
     public Sensors rightSensor, leftSensor;//sensors for switching lanes vrum vrum!!!
     #endregion
     void Start()
     {
+        int car_choice = Random.Range(0, numberOfCars - 1);//choose a car mesh
+        this.transform.SetParent(cars[car_choice].transform);
+
         #region Basic Inits
+
+        
 
         probabilityOfChangingLane = 4;
 
