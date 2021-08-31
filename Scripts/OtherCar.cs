@@ -16,13 +16,15 @@ public class OtherCar : MonoBehaviour
     private int wannaChangeTheLane, probabilityOfChangingLane;
     private const int numberOfCars = 15;
     public GameObject[] cars = new GameObject[numberOfCars];
+    private GameObject obj;
 
     public Sensors rightSensor, leftSensor;//sensors for switching lanes vrum vrum!!!
     #endregion
     void Start()
     {
         int car_choice = Random.Range(0, numberOfCars - 1);//choose a car mesh
-        this.transform.SetParent(cars[car_choice].transform);
+        obj = Instantiate(cars[car_choice],transform.position,transform.rotation);
+        obj.transform.parent = this.transform;
 
         #region Basic Inits
 
@@ -121,6 +123,7 @@ public class OtherCar : MonoBehaviour
         {
             Instantiate(currentCar, new Vector3(Aproximate(oldPosition.x), oldPosition.y, oldPosition.z + spawnDistance), Quaternion.Euler(0f, 0f, 0f));
             Destroy(gameObject);//destroy the car behind us
+            Destroy(obj);
         }
     }
 
@@ -153,14 +156,14 @@ public class OtherCar : MonoBehaviour
             float oxPosition = 0f;
             if (currentCar.transform.position.x <= -2f && changedToRight == true)
             {
-                rightBlinker.changeState();
+                //rightBlinker.changeState();
                 oxPosition = -2f;
                 Vector3 newPosition = new Vector3(oxPosition, this.transform.position.y, this.transform.position.z);
                 this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);
             }
             else if (currentCar.transform.position.x >= -6f && changedToLeft == true)
             {
-                leftBlinker.changeState();
+                //leftBlinker.changeState();
                 oxPosition = -6f;
                 Vector3 newPosition = new Vector3(oxPosition, this.transform.position.y, this.transform.position.z);
                 this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);
