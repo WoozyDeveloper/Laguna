@@ -9,8 +9,8 @@ public class CarMovement : MonoBehaviour
     //right, left OX
     //up, down OY
     //front, back OZ
-    public Button acceleration, brake;
-    private bool accelerationPressed, brakePressed;
+    public Button acceleration, brake, left, right;
+    private bool accelerationPressed, brakePressed, leftPressed, rightPressed;
     public bool freezeGame;
     public GameObject redArrow, speedometer;
     public float turnSpeed = 10f;
@@ -22,20 +22,23 @@ public class CarMovement : MonoBehaviour
 
     void Start()
     {
-
-        //Time.timeScale = 0.0f;//stop the game
-
+        #region Init
         //hide the UI for the game
+        
         acceleration.gameObject.SetActive(false);
         brake.gameObject.SetActive(false);
         redArrow.gameObject.SetActive(false);
         speedometer.gameObject.SetActive(false);
+        left.gameObject.SetActive(false);
+        right.gameObject.SetActive(false);
 
 
         freezeGame = true;//freeze the game until you start it
         Application.targetFrameRate = 160;
         accelerationPressed = false;//the acceleration
         brakePressed = false;//the brake
+        leftPressed = false;//left button
+        rightPressed = false;//right button
 
         car = GetComponent<Rigidbody>();//current car
 
@@ -47,6 +50,7 @@ public class CarMovement : MonoBehaviour
          * etc etc...
          */
         topSpeed = 80;//change it for every car
+        #endregion
     }
 
     void Update()
@@ -61,6 +65,8 @@ public class CarMovement : MonoBehaviour
                 brake.gameObject.SetActive(true);
                 redArrow.gameObject.SetActive(true);
                 speedometer.gameObject.SetActive(true);
+                left.gameObject.SetActive(true);
+                right.gameObject.SetActive(true);
             }
 
             if(FindObjectOfType<CameraScript>().transform.rotation.y == 0f)
@@ -76,7 +82,7 @@ public class CarMovement : MonoBehaviour
             Vector2 mousePos = Input.mousePosition;//mouse pos(x,y)
 
             //for RIGHT direction
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || rightPressed == true)
             {
                 #region movement of the car to right
 
@@ -89,12 +95,12 @@ public class CarMovement : MonoBehaviour
                 #endregion
                 #region tilt the car to the left
                 
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 15, 10), 5 * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 10, 10), 5 * Time.deltaTime);
                 
                 #endregion
             }
             //for LEFT direction
-            else if (Input.GetKey(KeyCode.A))
+            else if (Input.GetKey(KeyCode.A) || leftPressed == true)
             {
                 #region movement of the car to left
 
@@ -106,7 +112,7 @@ public class CarMovement : MonoBehaviour
                 #endregion
                 #region tilt the car to the right
             
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -15, -10), 5 * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -10, -10), 5 * Time.deltaTime);
 
                 #endregion
             }
@@ -134,15 +140,18 @@ public class CarMovement : MonoBehaviour
             else if(Input.GetKey(KeyCode.Space) || brakePressed == true)
             {
                 if(carSpeed >= 12f)
-                carSpeed -= .5f;
-
-                brake.transform.localScale = new Vector2(brake.transform.localScale.x, 0.5f);
+                    carSpeed -= .5f;
+                if(brake.transform.localScale.y >= 0.5f)
+                    brake.transform.localScale = new Vector2(brake.transform.localScale.x, brake.transform.localScale.y - 0.02f);
             }
-            else//hoo prrr easy easy stam asa cu mainile la ceafa ce sa facem si noi daca nu apesi pe butoane
+            else//no buttons pressed
             {
-                //scale of the pedal
+                //scale of the acceleration pedal
                 if (acceleration.transform.localScale.y <= 1f)
                     acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y + 0.02f);
+                //scale of the brake pedal
+                if (brake.transform.localScale.y <= 0.8f)
+                    brake.transform.localScale = new Vector2(brake.transform.localScale.x, brake.transform.localScale.y + 0.02f);
 
                 if (carSpeed >= 15f)
                 {
@@ -169,6 +178,7 @@ public class CarMovement : MonoBehaviour
     }
 
     //brake
+    //TODO: LIGHTS ON BrakePressed
     public void BrakePressed()
     {
         brakePressed = true;
@@ -176,6 +186,26 @@ public class CarMovement : MonoBehaviour
     public void BrakeReleased()
     {
         brakePressed = false;
+    }
+
+    //left
+    public void LeftPressed()
+    {
+        leftPressed = true;
+    }
+    public void LeftReleased()
+    {
+        leftPressed = false;
+    }
+
+    //right
+    public void RightPressed()
+    {
+        rightPressed = true;
+    }
+    public void RightReleased()
+    {
+        rightPressed = false;
     }
     public void Death()
     {
