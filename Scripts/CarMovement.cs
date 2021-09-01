@@ -57,8 +57,15 @@ public class CarMovement : MonoBehaviour
     {
         if(!freezeGame)
         {
-            if(transform.position.y == .0f)
+            if(transform.position.z >= -20.0f && transform.position.z <= -15.0f)
+            {
+                car.transform.position = new Vector3(car.transform.position.x, 1.0f, car.transform.position.z);
                 car.constraints = RigidbodyConstraints.FreezePositionY;
+            }
+
+            if(transform.position.z >= -20.0f)
+                car.transform.position = new Vector3(car.transform.position.x, 1.0f, car.transform.position.z);
+
             if(!acceleration.IsActive())
             {
                 acceleration.gameObject.SetActive(true);
@@ -122,6 +129,7 @@ public class CarMovement : MonoBehaviour
                 car.velocity = new Vector3(car.velocity.x, 0, carSpeed);
 
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 8 * Time.deltaTime);
+
                 currentTurnSpeed = 0f;
             }
 
@@ -140,7 +148,10 @@ public class CarMovement : MonoBehaviour
             else if(Input.GetKey(KeyCode.Space) || brakePressed == true)
             {
                 if(carSpeed >= 12f)
+                {
+                    this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(8, this.transform.rotation.y, this.transform.rotation.z), 10 * Time.deltaTime);
                     carSpeed -= .5f;
+                }
                 if(brake.transform.localScale.y >= 0.5f)
                     brake.transform.localScale = new Vector2(brake.transform.localScale.x, brake.transform.localScale.y - 0.02f);
             }
@@ -160,7 +171,7 @@ public class CarMovement : MonoBehaviour
                     //deceleration
                     carSpeed -= .05f;
                     //tilt
-                    this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(10, 0, 0), 10 * Time.deltaTime);
+                    this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 10 * Time.deltaTime);
                 }
             }
         }
