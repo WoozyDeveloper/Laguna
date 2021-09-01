@@ -82,7 +82,10 @@ public class CarMovement : MonoBehaviour
                 #region movement of the car to right
 
                 const float step = 0.08f;
-                car.AddForce(new Vector3(currentTurnSpeed += step, 0f, 0f), ForceMode.Impulse);
+
+                if(currentTurnSpeed <= 10f)
+                    currentTurnSpeed += step;
+                car.AddForce(new Vector3(currentTurnSpeed, 0f, 0f), ForceMode.Impulse);
 
                 #endregion
                 #region tilt the car to the left
@@ -97,7 +100,9 @@ public class CarMovement : MonoBehaviour
                 #region movement of the car to left
 
                 const float step = 0.08f;
-                car.AddForce(new Vector3(-(currentTurnSpeed += step), 0f, 0f), ForceMode.Impulse);
+                if(currentTurnSpeed >= -10f)
+                    currentTurnSpeed -= step;
+                car.AddForce(new Vector3(currentTurnSpeed, 0f, 0f), ForceMode.Impulse);
 
                 #endregion
                 #region tilt the car to the right

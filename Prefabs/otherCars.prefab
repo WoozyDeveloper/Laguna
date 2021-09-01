@@ -211,5 +211,6 @@ MonoBehaviour:
   - {fileID: 6361095667226964869, guid: ec2dad0bc0a5ec245b4c31b0b7a00521, type: 3}
   - {fileID: 2327942933433126609, guid: 882e9c7eb5a1df145ad9fb0c2eae8598, type: 3}
   - {fileID: 877746141918546034, guid: 575be73585b0bf245b9aa3c613cbc13d, type: 3}
+  - {fileID: 35734400614655645, guid: 47111b9bb43dcd647ad9fee081904afb, type: 3}
   rightSensor: {fileID: 6817489750615491024}
   leftSensor: {fileID: 7526583720508805223}

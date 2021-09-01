@@ -14,7 +14,7 @@ public class OtherCar : MonoBehaviour
     private CarMovement playerCar;
     private Rigidbody currentCar;
     private int wannaChangeTheLane, probabilityOfChangingLane;
-    private const int numberOfCars = 15;
+    private const int numberOfCars = 16;
     public GameObject[] cars = new GameObject[numberOfCars];
     private GameObject obj;
 

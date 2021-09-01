@@ -7,8 +7,8 @@ public class MenuScript : MonoBehaviour
 {
     private CarMovement game;
     [SerializeField] private Button start,options,exit,garageButton,backFromGarage;
-    private const float lastCameraPositionOZ = -29.82f,//last position of the camera on OZ after the intro animation
-                        garageCameraPositionOX = 7.07f;//last position of the camera on OX after you press the START button
+    private const float lastCameraPositionOZ = -27.16f,//last position of the camera on OZ after the intro animation
+                        garageCameraPositionOX = 4.14f;//last position of the camera on OX after you press the START button
     private bool clicked,
                 buttonVisibility;//see if the user clicked on a button (any button)
 
@@ -91,7 +91,7 @@ public class MenuScript : MonoBehaviour
             garageButton.gameObject.SetActive(true);//activate the GO button to start the game
             backFromGarage.gameObject.SetActive(true);
         }
-        else if(transform.position.x !=garageCameraPositionOX)
+        else if(transform.position.x != garageCameraPositionOX)
         {
             garageButton.gameObject.SetActive(false);//disable the go button if you press back
             backFromGarage.gameObject.SetActive(false);
