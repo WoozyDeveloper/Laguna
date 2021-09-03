@@ -178,6 +178,7 @@ public class CarMovement : MonoBehaviour
 
     }
 
+    #region Trigger Event Buttons
     //acceleration
     public void AccelerationPressed()
     {
@@ -218,6 +219,7 @@ public class CarMovement : MonoBehaviour
     {
         rightPressed = false;
     }
+    #endregion
     public void Death()
     {
         //add a pop-up with score etc. ...
