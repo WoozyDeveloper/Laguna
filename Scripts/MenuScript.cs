@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
-    [SerializeField] private Animation UI_animation;
-    private CarMovement game;
+    [SerializeField] private CarMovement game;
     [SerializeField] private Button start, options, exit, garageButton, backFromGarage;
 
     //the UI for the gameplay
-    public Button left, right, accelerometer, brake;
+    public Button left, right, acceleration, brake;
     private const float lastCameraPositionOZ = -27.16f,//last position of the camera on OZ after the intro animation
                         garageCameraPositionOX = 4.14f;//last position of the camera on OX after you press the START button
     private bool clicked,
@@ -19,8 +18,6 @@ public class MenuScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        game = FindObjectOfType<CarMovement>();
-
         garageButton.gameObject.SetActive(false);//hide the GO button from the garage
         backFromGarage.gameObject.SetActive(false);
 
@@ -66,7 +63,6 @@ public class MenuScript : MonoBehaviour
     //press on options button
     public void OptionsButton()
     {
-        UI_animation.Play();
 
         //hide the buttons
         ShowButtons(false);
