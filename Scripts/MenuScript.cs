@@ -10,7 +10,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField] private Button start, options, exit, garageButton, backFromGarage;
 
     //the UI for the gameplay
-    public Button left, right, accelerometer, speedIndicator, acceleration, brake;
+    public Button left, right, accelerometer, brake;
     private const float lastCameraPositionOZ = -27.16f,//last position of the camera on OZ after the intro animation
                         garageCameraPositionOX = 4.14f;//last position of the camera on OX after you press the START button
     private bool clicked,
