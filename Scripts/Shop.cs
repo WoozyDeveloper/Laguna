@@ -8,7 +8,6 @@ public class Shop : MonoBehaviour
     private int currentCar;
     public GameObject[] carModels = new GameObject[numberOfCars];
     public GameObject door;
-    [SerializeField] private new string carName;
 
     void Start()
     {

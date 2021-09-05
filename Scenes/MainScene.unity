@@ -3969,7 +3969,6 @@ MonoBehaviour:
   - {fileID: 877746141918546034, guid: 575be73585b0bf245b9aa3c613cbc13d, type: 3}
   - {fileID: 35734400614655645, guid: 47111b9bb43dcd647ad9fee081904afb, type: 3}
   door: {fileID: 385235313867288470}
-  carName: 
 --- !u!1 &689626335
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,30 +5295,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: door_animation
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &958258729
