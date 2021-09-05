@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5453414410182852288}
   - component: {fileID: 5453414410179952352}
   - component: {fileID: 5453414410180951072}
-  - component: {fileID: 5453414410183238727}
   m_Layer: 0
   m_Name: Hotel
   m_TagString: Untagged
@@ -83,17 +82,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5453414410183238727
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5453414410183140064}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 0c8a2aad013b93b4a93c0c7862454246, type: 3}

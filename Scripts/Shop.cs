@@ -18,7 +18,8 @@ public class Shop : MonoBehaviour
 
     void Update()
     {
-
+        if(FindObjectOfType<CarMovement>().transform.position.z > 0)
+            return;
         if (door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("open_door_animation") && buttonPressed == true)
         {
             foreach (Transform child in transform) 

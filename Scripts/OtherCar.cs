@@ -135,14 +135,14 @@ public class OtherCar : MonoBehaviour
             float oxPosition = 0f;
             if (currentCar.transform.position.x <= 6f && changedToRight == true)
             {
-                rightBlinker.changeState();
+            //    rightBlinker.changeState();
                 oxPosition = 6f;
                 Vector3 newPosition = new Vector3(oxPosition, this.transform.position.y, this.transform.position.z);
                 this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);
             }
             else if (currentCar.transform.position.x >= 2f && changedToLeft == true)
             {
-                leftBlinker.changeState();
+            //    leftBlinker.changeState();
                 oxPosition = 2f;
                 Vector3 newPosition = new Vector3(oxPosition, this.transform.position.y, transform.position.z);
                 this.transform.position = Vector3.MoveTowards(this.transform.position, newPosition, 2 * Time.deltaTime);

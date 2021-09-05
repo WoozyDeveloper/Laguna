@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9081646217779151559}
   - component: {fileID: 9081646217775760103}
   - component: {fileID: 9081646217776726055}
-  - component: {fileID: 3738504053199990003}
   m_Layer: 0
   m_Name: RoadSign_01
   m_TagString: Untagged
@@ -83,17 +82,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3738504053199990003
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9081646217778732775}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: c132e900a81025d4fbfcd099ea4c2d26, type: 3}
