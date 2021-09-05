@@ -12,7 +12,7 @@ public class FPSscript : MonoBehaviour
 
     void Update()
     {
-        if( m_timeCounter < m_refreshTime )
+       /* if( m_timeCounter < m_refreshTime )
         {
             m_timeCounter += Time.deltaTime;
             m_frameCounter++;
@@ -24,6 +24,6 @@ public class FPSscript : MonoBehaviour
             m_frameCounter = 0;
             m_timeCounter = 0.0f;
         }
-        Debug.LogError(m_lastFramerate.ToString());
+        Debug.LogError(m_lastFramerate.ToString());*/
     }
 }

@@ -57,7 +57,6 @@ public class CarMovement : MonoBehaviour
     {
         if(!freezeGame)
         {
-            Debug.LogError("SE INTRA");
             if(transform.position.z >= -20.0f && transform.position.z <= -15.0f)
             {
                 car.transform.position = new Vector3(car.transform.position.x, 1.0f, car.transform.position.z);

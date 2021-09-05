@@ -14,18 +14,30 @@ public class Shop : MonoBehaviour
         currentCar = 1;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RightPress()
     {
-        Debug.LogError(door.transform.position.x);
-        if((int)door.transform.rotation.x + 1 == oxRotation)
-        {
-            Debug.LogError("AM AJUNS LA 90");
+        if(currentCar < numberOfCars)
             currentCar++;
-            Destroy(this);
-            int car_choice = Random.Range(0, numberOfCars - 1);//choose a car mesh
-            GameObject obj = Instantiate(carModels[car_choice], transform.position, transform.rotation);
-            obj.transform.parent = this.transform;
-        }
+        StartCoroutine(Coroutine());
+        Destroy(this);
+        int car_choice = Random.Range(0, numberOfCars - 1);//choose a car mesh
+        GameObject obj = Instantiate(carModels[car_choice], transform.position, transform.rotation);
+        obj.transform.parent = this.transform;
+    }
+
+    public void LeftPress()
+    {
+        if(currentCar > 0)
+            currentCar--;
+        StartCoroutine(Coroutine());
+        Destroy(this);
+        int car_choice = Random.Range(0, numberOfCars - 1);//choose a car mesh
+        GameObject obj = Instantiate(carModels[car_choice], transform.position, transform.rotation);
+        obj.transform.parent = this.transform;
+    }
+
+    IEnumerator Coroutine()
+    {
+        yield return new WaitForSeconds(5);
     }
 }
