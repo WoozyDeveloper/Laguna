@@ -2945,6 +2945,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406810206}
   m_Mesh: {fileID: -7279385642663761195, guid: 17e10e7a8d8ae724eadb7058e120e32e, type: 3}
+--- !u!1 &414338308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4618800910305961051, guid: 301e681fcc2f46845931a03419d58d09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1245805835}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &414338309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414338308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0000005, y: 0.0000004768372, z: 3.0000007}
+  m_Center: {x: -0.000000059604645, y: 0.15648182, z: -0.00000023841858}
 --- !u!4 &421257196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9190681272309813207, guid: 09ef8aaf7eb74a847add702e1e143d0a,
@@ -4859,6 +4878,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: copacAdi1
       objectReference: {fileID: 0}
+    - target: {fileID: 5370368753697484096, guid: 6d31a669fdbfb534d88b604419303131,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370368753697484096, guid: 6d31a669fdbfb534d88b604419303131,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d31a669fdbfb534d88b604419303131, type: 3}
 --- !u!1001 &837193577
@@ -6287,7 +6316,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e43af7a8eb0e2264ea4e45ec944b223c, type: 3}
 --- !u!1001 &1161875606
 PrefabInstance:
@@ -6799,6 +6829,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: copacAdi2
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 794208163f2042841ad06e7eaba4b09e,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 794208163f2042841ad06e7eaba4b09e,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 794208163f2042841ad06e7eaba4b09e, type: 3}
 --- !u!1 &1243357484
@@ -6966,7 +7006,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 301e681fcc2f46845931a03419d58d09, type: 3}
 --- !u!1001 &1247178845
 PrefabInstance:
@@ -7777,7 +7818,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6485325625496309397, guid: 2de9d03b21cb3d8409f09b5f7b888d73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2de9d03b21cb3d8409f09b5f7b888d73, type: 3}
 --- !u!1001 &1362045381
 PrefabInstance:
@@ -8371,7 +8413,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6485325625496309397, guid: 2de9d03b21cb3d8409f09b5f7b888d73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2de9d03b21cb3d8409f09b5f7b888d73, type: 3}
 --- !u!1 &1540841511
 GameObject:
@@ -8455,6 +8498,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540841511}
   m_Mesh: {fileID: 8009005921955675309, guid: 17e10e7a8d8ae724eadb7058e120e32e, type: 3}
+--- !u!1 &1562830142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4670117157566636399, guid: 1131972193e77d94583d72ceb987940c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1885172562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1562830143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562830142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.067048, y: 14.411393, z: 6.2987394}
+  m_Center: {x: 0.00000047758573, y: 7.177942, z: 0.40190107}
 --- !u!4 &1568320746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1544835745451081848, guid: 9eeab7a447fe4c447a8fd910aef71cc5,
@@ -8808,10 +8870,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5048493820947337240, guid: a87344c37c6d32047993cf3f8cb8120b,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5048493820947337240, guid: a87344c37c6d32047993cf3f8cb8120b,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 882129737928793925, guid: a87344c37c6d32047993cf3f8cb8120b,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 882129737928793925, guid: a87344c37c6d32047993cf3f8cb8120b,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a87344c37c6d32047993cf3f8cb8120b,
         type: 3}
       propertyPath: m_Name
       value: CASAADIblend
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678983825568202982, guid: a87344c37c6d32047993cf3f8cb8120b,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678983825568202982, guid: a87344c37c6d32047993cf3f8cb8120b,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a87344c37c6d32047993cf3f8cb8120b, type: 3}
@@ -9197,7 +9289,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9072466643047624099, guid: 09ef8aaf7eb74a847add702e1e143d0a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 09ef8aaf7eb74a847add702e1e143d0a, type: 3}
 --- !u!1001 &1885172562
 PrefabInstance:
@@ -9276,12 +9369,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4670117157566604850, guid: 1131972193e77d94583d72ceb987940c,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4670117157566636399, guid: 1131972193e77d94583d72ceb987940c,
         type: 3}
       propertyPath: m_Name
       value: House_04 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4670117157566604850, guid: 1131972193e77d94583d72ceb987940c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1131972193e77d94583d72ceb987940c, type: 3}
 --- !u!4 &1885172563 stripped
 Transform:
@@ -10350,7 +10449,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6485325625496309397, guid: 2de9d03b21cb3d8409f09b5f7b888d73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2de9d03b21cb3d8409f09b5f7b888d73, type: 3}
 --- !u!4 &2116272779 stripped
 Transform:
