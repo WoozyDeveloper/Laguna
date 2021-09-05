@@ -17,8 +17,10 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(door.transform.rotation.x == oxRotation)
+        Debug.LogError(door.transform.position.x);
+        if((int)door.transform.rotation.x + 1 == oxRotation)
         {
+            Debug.LogError("AM AJUNS LA 90");
             currentCar++;
             Destroy(this);
             int car_choice = Random.Range(0, numberOfCars - 1);//choose a car mesh
