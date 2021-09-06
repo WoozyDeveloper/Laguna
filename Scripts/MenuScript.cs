@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MenuScript : MonoBehaviour
 {
     [SerializeField] private CarMovement game;
-    [SerializeField] private Button start, options, exit, garageButton, backFromGarage;
+    [SerializeField] private Button start, options, exit, garageButton, backFromGarage, leftGarage, rightGarage;
 
     //the UI for the gameplay
     public Button left, right, acceleration, brake;
@@ -19,7 +19,9 @@ public class MenuScript : MonoBehaviour
     private void Start()
     {
         garageButton.gameObject.SetActive(false);//hide the GO button from the garage
-        backFromGarage.gameObject.SetActive(false);
+        backFromGarage.gameObject.SetActive(false);//back button
+        leftGarage.gameObject.SetActive(false);//left arrow from the 'shop'
+        rightGarage.gameObject.SetActive(false);//right arrow from the 'shop'
 
         ShowButtons(false);//hide the buttons bcs of the intro animation
         buttonVisibility = false;//buttons are not visible
@@ -38,8 +40,10 @@ public class MenuScript : MonoBehaviour
     //start the actual game after you press the 'GO' button
     public void GarageGoButton()
     {
-        garageButton.gameObject.SetActive(false);//hide the button
+        garageButton.gameObject.SetActive(false);
         backFromGarage.gameObject.SetActive(false);
+        leftGarage.gameObject.SetActive(false);
+        rightGarage.gameObject.SetActive(false);
 
         game.freezeGame = false;//start the game
         this.enabled = false;//disable this script
@@ -92,11 +96,15 @@ public class MenuScript : MonoBehaviour
         {
             garageButton.gameObject.SetActive(true);//activate the GO button to start the game
             backFromGarage.gameObject.SetActive(true);
+            leftGarage.gameObject.SetActive(true);
+            rightGarage.gameObject.SetActive(true);
         }
         else if(transform.position.x != garageCameraPositionOX)
         {
             garageButton.gameObject.SetActive(false);//disable the go button if you press back
             backFromGarage.gameObject.SetActive(false);
+            leftGarage.gameObject.SetActive(false);
+            rightGarage.gameObject.SetActive(false);
         }
     }
 
