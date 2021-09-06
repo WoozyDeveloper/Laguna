@@ -6,13 +6,13 @@ public class Shop : MonoBehaviour
 {
     private bool buttonPressed;
     private const int numberOfCars = 16, oxRotation = 90;
-    private int currentCar;
+    [SerializeField] private int currentCar;
     public GameObject[] carModels = new GameObject[numberOfCars];
     public GameObject door;
 
     void Start()
     {
-        currentCar = 1;
+        currentCar = 0;
         buttonPressed = false;
     }
 
@@ -26,8 +26,7 @@ public class Shop : MonoBehaviour
             {
                 GameObject.Destroy(child.gameObject);
             }
-            int car_choice = Random.Range(0, numberOfCars - 1);//choose a car mesh
-            GameObject obj = Instantiate(carModels[car_choice], transform.position, transform.rotation);
+            GameObject obj = Instantiate(carModels[currentCar], transform.position, transform.rotation);
             obj.transform.parent = this.transform;
             buttonPressed = false;
         }
