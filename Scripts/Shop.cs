@@ -8,7 +8,7 @@ public class Shop : MonoBehaviour
     private const int numberOfCars = 16, oxRotation = 90;
     [SerializeField] private int currentCar;
     public GameObject[] carModels = new GameObject[numberOfCars];
-    public GameObject door;
+    [SerializeField] private GameObject door;
 
     void Start()
     {
@@ -29,6 +29,7 @@ public class Shop : MonoBehaviour
             GameObject obj = Instantiate(carModels[currentCar], transform.position, transform.rotation);
             obj.transform.parent = this.transform;
             buttonPressed = false;
+            
         }
     }
 

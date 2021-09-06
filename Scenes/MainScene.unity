@@ -3970,6 +3970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f582123e6b376d346bbb88e62c063600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCar: 0
   carModels:
   - {fileID: 2086082081851829014, guid: 4ee37db786a5ecd40948574f249e1888, type: 3}
   - {fileID: 8603947346005607963, guid: 10e7498dab5650d4ab0d29522baf84b6, type: 3}
@@ -3988,6 +3989,7 @@ MonoBehaviour:
   - {fileID: 877746141918546034, guid: 575be73585b0bf245b9aa3c613cbc13d, type: 3}
   - {fileID: 35734400614655645, guid: 47111b9bb43dcd647ad9fee081904afb, type: 3}
   door: {fileID: 385235313867288470}
+  car: {fileID: 0}
 --- !u!1 &689626335
 GameObject:
   m_ObjectHideFlags: 0
@@ -5486,6 +5488,8 @@ MonoBehaviour:
   exit: {fileID: 1020679496}
   garageButton: {fileID: 1098462072}
   backFromGarage: {fileID: 180668107}
+  leftGarage: {fileID: 1941070969}
+  rightGarage: {fileID: 958258728}
   left: {fileID: 1222535189}
   right: {fileID: 689626338}
   acceleration: {fileID: 1299169656}
@@ -6433,17 +6437,17 @@ PrefabInstance:
     - target: {fileID: 604831320672473607, guid: 4ee37db786a5ecd40948574f249e1888,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 604831320672473607, guid: 4ee37db786a5ecd40948574f249e1888,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.71
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 604831320672473607, guid: 4ee37db786a5ecd40948574f249e1888,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.66
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 604831320672473607, guid: 4ee37db786a5ecd40948574f249e1888,
         type: 3}
@@ -11173,7 +11177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147779378072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27, y: 2.19, z: -34.541}
+  m_LocalPosition: {x: 1.27, y: 2.19, z: -36.766}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 682056545}
