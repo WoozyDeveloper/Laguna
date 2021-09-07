@@ -45,6 +45,8 @@ public class MenuScript : MonoBehaviour
         leftGarage.gameObject.SetActive(false);
         rightGarage.gameObject.SetActive(false);
 
+        game.GetComponent<Animator>().enabled = false;
+
         game.freezeGame = false;//start the game
         this.enabled = false;//disable this script
 

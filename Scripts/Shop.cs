@@ -28,6 +28,9 @@ public class Shop : MonoBehaviour
             }
             GameObject obj = Instantiate(carModels[currentCar], transform.position, transform.rotation);
             obj.transform.parent = this.transform;
+
+            obj.GetComponentInParent<Animator>().Play("forward_car_shop");
+
             buttonPressed = false;
             
         }
