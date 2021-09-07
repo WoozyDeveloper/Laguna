@@ -13,7 +13,7 @@ public class CameraScript : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         carMovement = FindObjectOfType<CarMovement>();
-        cam.transform.rotation = new Quaternion(xQuat, 0, 0, wQuat);
+        cam.transform.rotation = new Quaternion(wQuat, xQuat, 0, 0);
     }
 
     void Update()

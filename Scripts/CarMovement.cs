@@ -13,6 +13,8 @@ public class CarMovement : MonoBehaviour
     private bool accelerationPressed, brakePressed, leftPressed, rightPressed;
     public bool freezeGame;
     public GameObject redArrow, speedometer;
+
+    private const int tilt_value = 4;
     public float turnSpeed = 10f;
     public float  currentTurnSpeed = 0f;
     private Rigidbody car;
@@ -102,7 +104,7 @@ public class CarMovement : MonoBehaviour
                 #endregion
                 #region tilt the car to the left
                 
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 10, 10), 5 * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, tilt_value, tilt_value), 5 * Time.deltaTime);
                 
                 #endregion
             }
@@ -119,7 +121,7 @@ public class CarMovement : MonoBehaviour
                 #endregion
                 #region tilt the car to the right
             
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -10, -10), 5 * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -tilt_value, -tilt_value), 5 * Time.deltaTime);
 
                 #endregion
             }
@@ -139,7 +141,7 @@ public class CarMovement : MonoBehaviour
                 if (carSpeed <= topSpeed)//100 is the max speed
                     carSpeed += 0.2f;//acceleration
                 //tilt
-                this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-10, this.transform.rotation.y, this.transform.rotation.z), 10 * Time.deltaTime);
+                this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-tilt_value, this.transform.rotation.y, this.transform.rotation.z), 10 * Time.deltaTime);
                 //scale of the pedal
                 if (acceleration.transform.localScale.y >= 0.8f)
                     acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y - 0.01f);
@@ -149,7 +151,7 @@ public class CarMovement : MonoBehaviour
             {
                 if(carSpeed >= 12f)
                 {
-                    this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(8, this.transform.rotation.y, this.transform.rotation.z), 10 * Time.deltaTime);
+                    this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler((float)tilt_value / 2, this.transform.rotation.y, this.transform.rotation.z), 10 * Time.deltaTime);
                     carSpeed -= .5f;
                 }
                 if(brake.transform.localScale.y >= 0.5f)
