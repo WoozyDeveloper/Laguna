@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: ecadd6e1aa710ab47a46e4faad4e2fc2
+guid: 1d641c4fb8b1be64f917138ca9791f2c
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: dollaryaya
-    second: {fileID: 2800000, guid: 323f5b531967af94f89cf2656a96de84, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
