@@ -962,7 +962,7 @@ Animator:
   m_GameObject: {fileID: 163009286}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d8cf3e64e297b744b0e563c457876f0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -971,6 +971,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &163009288
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163009286}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d86c26dfc5a6c7641946335360573811, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!4 &173925812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1781100592798442751, guid: 21f34b7eeb0a1e248ac4afa6891f1b27,
@@ -8731,7 +8746,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a2dff89ad246fb244a4330b565e04639,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.503
+      value: -28.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2dff89ad246fb244a4330b565e04639,
         type: 3}
