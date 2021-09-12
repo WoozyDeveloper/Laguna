@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     [SerializeField] private CarMovement game;
     [SerializeField] private Button start, options, exit, garageButton, backFromGarage, leftGarage, rightGarage;
+    [SerializeField] private GameObject startObj, optionsObj, exitObj;
 
     //the UI for the gameplay
     public Button left, right, acceleration, brake;
@@ -64,6 +65,8 @@ public class MenuScript : MonoBehaviour
         buttonVisibility = false;
         clicked = true;
         
+        //color the start write on the sign
+        startObj.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
     }
 
     //press on options button
@@ -74,10 +77,16 @@ public class MenuScript : MonoBehaviour
         ShowButtons(false);
         buttonVisibility = false;
         clicked = true;
+
+        optionsObj.GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
     }
 
     //press on exit button
-    public void ExitButton() => Application.Quit();
+    public void ExitButton()
+    {
+        exitObj.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+        Application.Quit();
+    } 
 
     // Update is called once per frame
     private void Update()
