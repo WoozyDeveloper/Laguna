@@ -12,7 +12,7 @@ public class MenuScript : MonoBehaviour
     //the UI for the gameplay
     public Button left, right, acceleration, brake;
     private const float lastCameraPositionOZ = -27.16f,//last position of the camera on OZ after the intro animation
-                        garageCameraPositionOX = 4.14f;//last position of the camera on OX after you press the START button
+                        garageCameraPositionOX = 4.975f;//last position of the camera on OX after you press the START button
     private bool clicked,
                 buttonVisibility;//see if the user clicked on a button (any button)
 
@@ -32,8 +32,7 @@ public class MenuScript : MonoBehaviour
     //back from the garage to the main menu
     public void BackFromGarage()
     {
-        Debug.Log("INTRA");
-    
+        startObj.transform.localScale = new Vector3(startObj.transform.localScale.x,startObj.transform.localScale.y, 100f);
         Start();
     }
 
@@ -66,7 +65,8 @@ public class MenuScript : MonoBehaviour
         clicked = true;
         
         //transform the button
-        transform.localScale = Vector3.Lerp (transform.localScale, transform.localScale / 2, Time.deltaTime * 10);
+        Vector3 pos = startObj.transform.localScale;
+        startObj.transform.localScale = new Vector3(startObj.transform.localScale.x,startObj.transform.localScale.y, 10f);
         //color the start write on the sign
         startObj.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
     }
