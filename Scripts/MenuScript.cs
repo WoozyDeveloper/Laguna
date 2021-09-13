@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MenuScript : MonoBehaviour
 {
     [SerializeField] private CarMovement game;
-    [SerializeField] private Button start, options, exit, garageButton, backFromGarage, leftGarage, rightGarage;
+    [SerializeField] private Button start, options, exit, garageButton, backFromGarage, leftGarage, rightGarage, pause;
     [SerializeField] private GameObject startObj, optionsObj, exitObj;
 
     //the UI for the gameplay
@@ -23,10 +23,21 @@ public class MenuScript : MonoBehaviour
         backFromGarage.gameObject.SetActive(false);//back button
         leftGarage.gameObject.SetActive(false);//left arrow from the 'shop'
         rightGarage.gameObject.SetActive(false);//right arrow from the 'shop'
+        pause.gameObject.SetActive(false);//pause button right top corner
 
         ShowButtons(false);//hide the buttons bcs of the intro animation
         buttonVisibility = false;//buttons are not visible
         clicked = false;//set the default value
+    }
+
+    //pause the game
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+
+        //TODO:
+        //1) put a panel and set its color to gray
+        //2) show the sign
     }
 
     //back from the garage to the main menu
@@ -44,6 +55,7 @@ public class MenuScript : MonoBehaviour
         backFromGarage.gameObject.SetActive(false);
         leftGarage.gameObject.SetActive(false);
         rightGarage.gameObject.SetActive(false);
+        pause.gameObject.SetActive(true);
 
         game.GetComponent<Animator>().enabled = false;
 
