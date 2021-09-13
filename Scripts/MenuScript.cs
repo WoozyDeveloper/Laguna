@@ -65,6 +65,8 @@ public class MenuScript : MonoBehaviour
         buttonVisibility = false;
         clicked = true;
         
+        //transform the button
+        transform.localScale = Vector3.Lerp (transform.localScale, transform.localScale / 2, Time.deltaTime * 10);
         //color the start write on the sign
         startObj.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
     }
