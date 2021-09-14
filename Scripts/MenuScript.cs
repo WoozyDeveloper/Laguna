@@ -7,7 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     [SerializeField] private CarMovement game;
     [SerializeField] private Button start, options, exit, garageButton, backFromGarage, leftGarage, rightGarage, pause;
-    [SerializeField] private GameObject startObj, optionsObj, exitObj;
+    [SerializeField] private GameObject startObj, optionsObj, exitObj, panel;
 
     //the UI for the gameplay
     public Button left, right, acceleration, brake;
@@ -33,7 +33,11 @@ public class MenuScript : MonoBehaviour
     //pause the game
     public void PauseGame()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = .0f;
+        
+        var img = panel.GetComponent<Image>().color;
+        img.a = 1f;
+        panel.GetComponent<Image>().color = img;
 
         //TODO:
         //1) put a panel and set its color to gray

@@ -4490,7 +4490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.08117676, y: -0.054138184}
+  m_AnchoredPosition: {x: -0.08117676, y: -0.05419922}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &794248809
@@ -5525,6 +5525,7 @@ MonoBehaviour:
   startObj: {fileID: 1759060057}
   optionsObj: {fileID: 1055433929}
   exitObj: {fileID: 882275436}
+  panel: {fileID: 794248807}
   left: {fileID: 1222535189}
   right: {fileID: 689626338}
   acceleration: {fileID: 1299169656}
@@ -8934,7 +8935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 93.262}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 528.7051, y: -37.02179}
+  m_AnchoredPosition: {x: 528.7051, y: -37.02173}
   m_SizeDelta: {x: 250, y: 234.4}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1652996400
@@ -10737,7 +10738,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2030686601}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2030686601
 MonoBehaviour:
   m_ObjectHideFlags: 0
