@@ -39,7 +39,6 @@ public class Shop : MonoBehaviour
     public void RightPress()
     {
         buttonPressed = true;
-        //door.transform.rotation = Quaternion.Euler(90f,-90f,90f);
         if(currentCar < numberOfCars)
             currentCar++;
     }
@@ -50,5 +49,4 @@ public class Shop : MonoBehaviour
         if(currentCar > 0)
             currentCar--;
     }
-
 }
