@@ -25,8 +25,8 @@ public class CarMovement : MonoBehaviour
     void Start()
     {
         #region Init
+        Time.timeScale = 1f;
         //hide the UI for the game
-        
         acceleration.gameObject.SetActive(false);
         brake.gameObject.SetActive(false);
         redArrow.gameObject.SetActive(false);
