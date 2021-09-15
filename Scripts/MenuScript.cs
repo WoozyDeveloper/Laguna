@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
@@ -28,20 +29,28 @@ public class MenuScript : MonoBehaviour
         ShowButtons(false);//hide the buttons bcs of the intro animation
         buttonVisibility = false;//buttons are not visible
         clicked = false;//set the default value
+
+        panel.gameObject.SetActive(false);
+    }
+
+    //press on resume
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        panel.gameObject.SetActive(false);
+    }
+
+    //return to menu from pause menu
+    public void ReturnToMenu()
+    {
+        FindObjectOfType<CarMovement>().Death();
     }
 
     //pause the game
     public void PauseGame()
     {
         Time.timeScale = .0f;
-        
-        var img = panel.GetComponent<Image>().color;
-        img.a = 1f;
-        panel.GetComponent<Image>().color = img;
-
-        //TODO:
-        //1) put a panel and set its color to gray
-        //2) show the sign
+        panel.gameObject.SetActive(true);
     }
 
     //back from the garage to the main menu
