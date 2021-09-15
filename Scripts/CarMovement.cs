@@ -160,10 +160,10 @@ public class CarMovement : MonoBehaviour
             else//no buttons pressed
             {
                 //scale of the acceleration pedal
-                if (acceleration.transform.localScale.y <= 1f)
+                if (acceleration.transform.localScale.y <= 1.7f)
                     acceleration.transform.localScale = new Vector2(acceleration.transform.localScale.x, acceleration.transform.localScale.y + 0.02f);
                 //scale of the brake pedal
-                if (brake.transform.localScale.y <= 0.8f)
+                if (brake.transform.localScale.y <= 1.15f)
                     brake.transform.localScale = new Vector2(brake.transform.localScale.x, brake.transform.localScale.y + 0.02f);
 
                 if (carSpeed >= 15f)
