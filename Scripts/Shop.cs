@@ -41,6 +41,8 @@ public class Shop : MonoBehaviour
         buttonPressed = true;
         if(currentCar < numberOfCars)
             currentCar++;
+        else
+            currentCar = numberOfCars - 1;
     }
 
     public void LeftPress()
@@ -48,5 +50,7 @@ public class Shop : MonoBehaviour
        buttonPressed = true;
         if(currentCar > 0)
             currentCar--;
+        else
+            currentCar = 0;
     }
 }
