@@ -8,7 +8,7 @@ public class MenuScript : MonoBehaviour
 {
     [SerializeField] private CarMovement game;
     [SerializeField] private Button start, options, exit, garageButton, backFromGarage, leftGarage, rightGarage, pause;
-    [SerializeField] private GameObject startObj, optionsObj, exitObj, panel;
+    [SerializeField] private GameObject startObj, optionsObj, exitObj, panel, spiral;
 
     //the UI for the gameplay
     public Button left, right, acceleration, brake;
@@ -49,6 +49,7 @@ public class MenuScript : MonoBehaviour
     //pause the game
     public void PauseGame()
     {
+
         Time.timeScale = .0f;
         panel.gameObject.SetActive(true);
     }
