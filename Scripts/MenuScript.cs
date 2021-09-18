@@ -50,7 +50,7 @@ public class MenuScript : MonoBehaviour
     public void PauseGame()
     {
 
-        Time.timeScale = .0f;
+        Time.timeScale = .0f;//
         panel.gameObject.SetActive(true);
     }
 
