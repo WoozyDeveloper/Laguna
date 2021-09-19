@@ -506,8 +506,8 @@ Rigidbody:
   m_GameObject: {fileID: 919132147779378072}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
+  m_Drag: 1
+  m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12921,7 +12921,6 @@ GameObject:
   - component: {fileID: 543450651719909666}
   - component: {fileID: 63819775}
   - component: {fileID: 63819773}
-  - component: {fileID: 919132147779378073}
   - component: {fileID: 919132147779378074}
   m_Layer: 0
   m_Name: CAAAR
@@ -12930,19 +12929,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &919132147779378073
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147779378072}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.17, y: 1, z: 4.77}
-  m_Center: {x: 0, y: -0.72, z: 5.02}
 --- !u!95 &919132147779378074
 Animator:
   serializedVersion: 3
