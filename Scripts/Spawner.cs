@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     private const int startingRoadsNum = 6;
     private CarMovement car;
     public GameObject road;
+    [SerializeField] private GameObject money;
 
     void Start()
     {
@@ -16,13 +17,17 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         SpawnTerrain();
+        SpawnMoney(money);
     }
 
     //spawn money
     private void SpawnMoney(GameObject money)
     {
-        var x = 2;
-        x++;
+        int[] possible_positions_ox = new int[] { -6, -2, 2, 6 };
+        int choice = Random.Range(0,5);
+
+        Vector3 next_position = new Vector3(possible_positions_ox[choice], 3f, car.transform.position.z + startingRoadsNum * 10 * road.transform.localScale.z);
+
     }
 
     //spawn the road
