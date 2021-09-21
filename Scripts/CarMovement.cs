@@ -226,6 +226,5 @@ public class CarMovement : MonoBehaviour
     {
         //add a pop-up with score etc. ...
         SceneManager.LoadScene(0, LoadSceneMode.Single);
-        Debug.Log("Noi codam, dar si cantam");
     }
 }

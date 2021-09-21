@@ -17,19 +17,7 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         SpawnTerrain();
-        SpawnMoney(money);
     }
-
-    //spawn money
-    private void SpawnMoney(GameObject money)
-    {
-        int[] possible_positions_ox = new int[] { -6, -2, 2, 6 };
-        int choice = Random.Range(0,5);
-
-        Vector3 next_position = new Vector3(possible_positions_ox[choice], 3f, car.transform.position.z + startingRoadsNum * 10 * road.transform.localScale.z);
-
-    }
-
     //spawn the road
     private void SpawnTerrain()
     {

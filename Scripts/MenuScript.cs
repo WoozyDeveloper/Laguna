@@ -121,12 +121,11 @@ public class MenuScript : MonoBehaviour
     {
         if(transform.position.z == lastCameraPositionOZ && clicked == false)
         {
-            if(buttonVisibility == true)//if the user clicked a button do nothing
-                Debug.Log("Mesaj strict secret ce nu trebuie vazut de nimeni!");//un mesaj strict secret ce nu trebuie vazut de nimeni
-            else   
+            //if(buttonVisibility == true)//if the user clicked a button do nothing
+            //    Debug.Log("Mesaj strict secret ce nu trebuie vazut de nimeni!");//un mesaj strict secret ce nu trebuie vazut de nimeni
+            if(buttonVisibility == false)   
                 if(start.gameObject.activeSelf == false)//check if the buttons are already displayed
                 {
-                    Debug.Log("CE DOAMNE FRATE MAI AI ACUM");
                     ShowButtons(true);
                     buttonVisibility = true;
                 }
