@@ -18,6 +18,14 @@ public class Spawner : MonoBehaviour
         SpawnTerrain();
     }
 
+    //spawn money
+    private void SpawnMoney(GameObject money)
+    {
+        var x = 2;
+        x++;
+    }
+
+    //spawn the road
     private void SpawnTerrain()
     {
         if (car.transform.position.z - road.transform.position.z >= road.transform.localScale.z * 10f)
