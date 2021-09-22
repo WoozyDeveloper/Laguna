@@ -10743,7 +10743,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1690094294564698069, guid: 4ee37db786a5ecd40948574f249e1888, type: 3}
+    - {fileID: 135970316529795086, guid: 4ee37db786a5ecd40948574f249e1888, type: 3}
+    - {fileID: 83540120229258265, guid: 4ee37db786a5ecd40948574f249e1888, type: 3}
+    - {fileID: 6734381679964531609, guid: 4ee37db786a5ecd40948574f249e1888, type: 3}
+    - {fileID: 4391761273575819797, guid: 4ee37db786a5ecd40948574f249e1888, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4ee37db786a5ecd40948574f249e1888, type: 3}
 --- !u!4 &2028205278 stripped
 Transform:
@@ -17926,6 +17931,7 @@ GameObject:
   - component: {fileID: 63819775}
   - component: {fileID: 63819773}
   - component: {fileID: 919132147779378074}
+  - component: {fileID: 919132147779378073}
   m_Layer: 0
   m_Name: CAAAR
   m_TagString: Player
@@ -17933,6 +17939,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &919132147779378073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147779378072}
+  m_Material: {fileID: 13400000, guid: 9706cfc248dbe4a4094bf84ea17c13f4, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.66, y: 1.37, z: 4.81}
+  m_Center: {x: 0, y: -0.28, z: 7.75}
 --- !u!95 &919132147779378074
 Animator:
   serializedVersion: 3
