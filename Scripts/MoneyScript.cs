@@ -42,16 +42,21 @@ public class MoneyScript : MonoBehaviour
     void Update()
     {
         
-        if((int)FindObjectOfType<CarMovement>().transform.position.z % 50 == 0)
+        if((int)FindObjectOfType<CarMovement>().transform.position.z % 1000 == 0)
         {
-            Instantiate(this,new Vector3(positions[(int)Random.Range(0,5)],transform.position.y,transform.position.z + 200f), Quaternion.identity);
+            int num = (int)Random.Range(0,5);
+            //Instantiate(this,new Vector3(positions[num],transform.position.y,transform.position.z + 200f), Quaternion.identity);
         }
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "theobjectToIgnore")
+        {
+            Physics.IgnoreCollision(FindObjectOfType<OtherCar>().GetComponent<Collider>(), GetComponent<Collider>());
+        }
+        if(other.gameObject.tag == "Player")
         {
             PlayerPrefs.SetInt("money_key", PlayerPrefs.GetInt("money_key") + 30);
             Destroy(gameObject);
