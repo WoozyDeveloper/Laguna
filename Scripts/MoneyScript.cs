@@ -55,6 +55,7 @@ public class MoneyScript : MonoBehaviour
 
         int choice = Random.Range(0,5);
         Instantiate(gameObject, new Vector3(Aproximate(positions[choice]),transform.position.y,transform.position.z + 200f), Quaternion.identity);
+        Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {
