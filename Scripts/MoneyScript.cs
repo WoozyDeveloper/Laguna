@@ -34,6 +34,7 @@ public class MoneyScript : MonoBehaviour
 
         */
         money = GetComponent<GameObject>();
+        car = FindObjectOfType<CarMovement>();
         transform.position = new Vector3(Aproximate(transform.position.x), 0.65f,transform.position.z);
         //Physics.IgnoreCollision(GetComponent<Collider>(),FindObjectOfType<CarMovement>().GetComponent<Collider>());
         Physics.IgnoreCollision(GetComponent<Collider>(),FindObjectOfType<OtherCar>().GetComponent<Collider>());
