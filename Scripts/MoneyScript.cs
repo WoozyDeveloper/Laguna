@@ -7,7 +7,7 @@ public class MoneyScript : MonoBehaviour
     private int[] positions = new int[] { -6, -2, 2, 6 };
     private GameObject money;
     [SerializeField] private CarMovement car;
-     private int Aproximate(float oxPosition)
+    private int Aproximate(float oxPosition)
     {
         float minimum_dif = float.MaxValue;
         int good_index = -1;
@@ -36,6 +36,7 @@ public class MoneyScript : MonoBehaviour
         money = GetComponent<GameObject>();
         car = FindObjectOfType<CarMovement>();
         transform.position = new Vector3(Aproximate(transform.position.x), 0.65f,transform.position.z);
+        Debug.Log("POS OX = " + transform.position.x);
         //Physics.IgnoreCollision(GetComponent<Collider>(),FindObjectOfType<CarMovement>().GetComponent<Collider>());
         Physics.IgnoreCollision(GetComponent<Collider>(),FindObjectOfType<OtherCar>().GetComponent<Collider>());
     }
@@ -54,8 +55,8 @@ public class MoneyScript : MonoBehaviour
         float oz_position = transform.position.z;
         const int step = 200;
 
-        int choice = Random.Range(0,5);
-        Instantiate(gameObject, new Vector3(Aproximate(positions[choice]),transform.position.y,transform.position.z + 200f), Quaternion.identity);
+        int choice = Random.Range(0,4);
+        Instantiate(gameObject, new Vector3(Aproximate(positions[choice]),transform.position.y,transform.position.z + step), Quaternion.identity);
         Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)
@@ -63,7 +64,7 @@ public class MoneyScript : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             PlayerPrefs.SetInt("money_key", PlayerPrefs.GetInt("money_key") + 30);
-
+            Debug.Log("Money Spawn!");
             Respawn();
         }
     }
